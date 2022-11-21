@@ -1,3 +1,3 @@
-# Boilerplate for Portfolio website
+# Next JS Boilerplate for Portfolio website
 
 Coming soon...
