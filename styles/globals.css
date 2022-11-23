@@ -1,3 +1,8 @@
+:root{
+  --card-color: #3c4043;
+  --background-color: #202124;
+}
+
 html,
 body {
   padding: 0;
@@ -21,6 +26,6 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: var(--background-color);
   }
 }

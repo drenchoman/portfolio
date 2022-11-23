@@ -1,36 +1,40 @@
 import React from 'react'
 import Container from './Container'
-import {DiJavascript1, DiHtml5,DiCss3, DiReact } from 'react-icons/di'
-import {SiSupabase, SiNextdotjs, SiVisualstudio, SiPostgresql, SiMongodb } from 'react-icons/si'
+import {DiJavascript, DiHtml5,DiCss3, DiReact } from 'react-icons/di'
+import {SiSupabase, SiNextdotjs, SiVisualstudio, SiPostgresql, SiMongodb, SiSqlite } from 'react-icons/si'
 import {FaNodeJs, FaAws, FaGithub, FaGitAlt } from 'react-icons/fa'
+import styles from '../../styles/Technologies.module.css'
+
 
 export default function Technologies() {
   const tech = [{
     id:1,
     header: 'Core',
-    description: 'My tech yo',
+    description: 'The Core Technologies I use on a daily basis',
     technologies:[
-      {
-      id: 101,
-      name: 'Javascript',
-      icon: <DiJavascript1 />
-    },
+     
       {
       id: 102,
       name: 'CSS',
       icon: <DiCss3 />
     },
-      {
+    {
       id: 103,
       name: 'HTML',
       icon: <DiHtml5 />
-    }],
+    },
+    {
+      id: 101,
+      name: 'JS',
+      icon: <DiJavascript/>
+    },
+    ],
   },
   
   {
     id: 2,
-    header: 'Front-end',
-    description: 'My tech yo',
+    header: 'Front End',
+    description: 'Front End weapons of choice',
     technologies:[
       {
       id: 104,
@@ -46,8 +50,8 @@ export default function Technologies() {
   },
   {
     id: 3,
-    header: 'Back-end',
-    description: 'My tech yo',
+    header: 'Back End',
+    description: 'The tools that do the heavy lifting',
     technologies:[
       {
       id: 107,
@@ -68,7 +72,7 @@ export default function Technologies() {
   {
     id: 4,
     header: 'Other Tools',
-    description: 'My tech yo',
+    description: 'Everyday workflow tools & databases I have worked with',
     technologies:[
       {
       id: 110,
@@ -80,6 +84,9 @@ export default function Technologies() {
       name: 'Postgresql',
       icon: <SiPostgresql />
     },
+    {id: 114,
+    name: 'SQLite3',
+  icon:<SiSqlite />},
       {
       id: 112,
       name: 'MongoDB',
@@ -94,8 +101,7 @@ export default function Technologies() {
 ]
 
   return (
-    <section>
-      <h2>hi</h2>
+    <section className={styles.wrapper}>
       {tech.map((x) => (
         <Container key={x.id} tech={x} />
       ))}
