@@ -7,10 +7,6 @@
   justify-content: center;
 }
 
-.wrapper:nth-child(2){
-  background-color: antiquewhite;
-}
-
 .card{
   display: flex;
   flex-direction: column;
@@ -19,6 +15,14 @@
   background-color: var(--card-color);
   padding: 1rem;
   align-items: center;
+}
+
+.card > h3{
+  font-size: 1.5rem;
+}
+
+.card > p{
+  font-size: 1rem;
 }
 
 .techWrapper{
