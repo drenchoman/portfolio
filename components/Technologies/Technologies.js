@@ -101,10 +101,15 @@ export default function Technologies() {
 ]
 
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.section}>
+      <h2>Technologies</h2>
+      <div className={styles.wrapper}>
+
+      
       {tech.map((x) => (
         <Container key={x.id} tech={x} />
       ))}
+      </div>
     </section>
   )
 }

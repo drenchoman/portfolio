@@ -5,14 +5,15 @@
   max-width: 1300px;
   justify-content: flex-start;
   align-items: center;
+  margin: 0 auto;
 }
 
 .names{
   display: flex;
   flex-direction: column;
   max-width: 1000px;
- position: relative;
-
+  position: relative;
+  margin: 0 auto;
 }
 
 .image{
