@@ -34,7 +34,7 @@ export default function Technologies() {
   {
     id: 2,
     header: 'Front End',
-    description: 'Front End weapons of choice',
+    description: 'Front End Weapons of Choice',
     technologies:[
       {
       id: 104,
