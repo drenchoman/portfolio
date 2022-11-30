@@ -9,7 +9,7 @@ import {BiLike, BiLinkExternal} from 'react-icons/bi'
 export default function Projects() {
 
   const proj = [
-    {id: 1,
+    {id: 'vc',
       name: 'Vintageclothing.co.nz',
       image: vc,
       p1: "Featured on Product Hunt, Tailwindhelper is an open source tool that helps you with tailwind classes. It can convert units, helps you choose colors, visualize how a font will look and more. Still a work in progress.",
@@ -20,7 +20,7 @@ export default function Projects() {
       icon: <BiLinkExternal />
     },
     {
-      id: 2,
+      id: 'ye',
       name: 'Ye Olde Diary',
       image: ye,
       p1: 'A blog for yadda yadd and it is awesome. Really cool tjing',

@@ -7,7 +7,6 @@ export default function Container({proj}) {
   return (
     <div className={styles.card}>
       <ProjectCard proj={proj} />
-      <ProjectImage img={proj.image} />
     </div>
   )
 }

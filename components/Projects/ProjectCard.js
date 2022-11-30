@@ -3,7 +3,7 @@ import styles from '../../styles/Projects.module.css'
 
 export default function ProjectCard({proj}) {
   return (
-    <div className={styles.pCard} >
+    <div id={proj.id} className={styles.pCard} >
       <div>
         <h3>{proj.name}</h3>
       </div>

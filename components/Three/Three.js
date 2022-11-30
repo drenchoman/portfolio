@@ -93,14 +93,52 @@ const baseGeo = new THREE.BoxGeometry(12, 8, 1 )
 const base = new THREE.Mesh(baseGeo,
   new THREE.MeshBasicMaterial({color: 0x5CB8E4}))
 
-scene.add(pc)
+
 stick.position.setZ(-1)
-stick.position.setY(-5)
-base.position.setY(-10)
+
+
 base.rotation.x = -8
 
+
+
+const m = document.querySelector('#vc')
+const b = document.querySelector('#__next')
+
+const bRect = b.getBoundingClientRect()
+const mRect = m.getBoundingClientRect()
+console.log(mRect);
+console.log(bRect)
+
+const stickYPos = -10
+const baseYPos = -15
+const topPos = mRect.top * -0.07
+console.log(topPos);
+console.log(mRect.top);
+
+pc.position.set(0,topPos,-100)
+stick.position.set(0,topPos + stickYPos,-100)
+base.position.set(0,topPos + baseYPos,-100)
+
+scene.add(pc)
 scene.add(stick)
 scene.add(base)
+
+
+// const positionPc = () => {
+//   const m = document.querySelector('#vc')
+//   const bRect = document.body.getBoundingClientRect()
+//   const mRect = m.getBoundingClientRect()
+//   const offset = bRect - mRect
+
+//   console.log(mRect.y)
+//   console.log(mRect);
+//   console.log(mRect.y)
+//   console.log(bRect);
+
+//   pc.position.y = -20
+// }
+// positionPc()
+
   // Animations
 
   const rotateBox = (name) => {
@@ -128,7 +166,32 @@ const moveCamera = () => {
   camera.position.z = 30 + t * -0.01
   camera.position.x = t * -0.002
   camera.position.y = t * -0.002
+
   moveCube(t)
+  console.log(t);
+  console.log(mRect.top);
+  // movePc(t)
+  // const zz = document.querySelector('#vc')
+  // const bRect = document.body.getBoundingClientRect()
+  // const mRect = zz.getBoundingClientRect().top
+
+  // console.log(mRect);
+
+}
+
+const movePc = (t) => {
+  
+  const pcBase = pc.position.y
+  const stickBase = stick.position.y
+  const baseBase = base.position.y
+  console.log(baseBase);
+  // pc.position.z = t * -0.01
+  // stick.position.z = t * -0.01
+  // base.position.z = t * -0.01
+
+  pc.position.y = pcBase + t * -0.0001
+  stick.position.y = stickBase + t * -0.0001
+  base.position.y = baseBase+ t * -0.0001
 }
 
 const moveCube = (t) => {

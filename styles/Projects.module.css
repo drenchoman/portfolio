@@ -1,3 +1,10 @@
+.section{
+  display: flex;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+}
+
 .card{
   display: flex;
   flex-direction: column;
