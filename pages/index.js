@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Technologies from '../components/Technologies/Technologies'
 import HomePage from '../components/Home/Home'
+import Three from '../components/Three/Three'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <Three />
        <HomePage />
        <Technologies />
       </main>

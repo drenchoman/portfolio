@@ -5,7 +5,7 @@ export default function Container({tech}) {
   return (
     <div className={styles.card}>
       <h3>{tech.header}</h3>
-      <p>{tech.description}</p>
+      {/* <p>{tech.description}</p> */}
       <div className={styles.techWrapper}>
 
       {tech.technologies.map((x, i) => (
