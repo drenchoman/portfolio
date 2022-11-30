@@ -5,7 +5,7 @@ import styles from '../../styles/Projects.module.css'
 
 export default function Container({proj}) {
   return (
-    <div className={styles.card}>
+    <div className={styles.container}>
       <ProjectCard proj={proj} />
     </div>
   )
