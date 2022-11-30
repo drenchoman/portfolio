@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import Technologies from '../components/Technologies/Technologies'
 import HomePage from '../components/Home/Home'
 import Three from '../components/Three/Three'
+import Projects from '../components/Projects/Projects'
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <Three />
        <HomePage />
        <Technologies />
+       <Projects />
       </main>
 
       
