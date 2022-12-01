@@ -5,6 +5,7 @@
   --c2: #624F82;
   --c3: #9F73AB;
   --c4: #0014FF;
+  --animation-delay: 0.7s
   
 }
 
@@ -36,7 +37,14 @@ canvas{
 }
 
 section{
-  margin: 1rem 0;
+  margin: 1rem auto;
+  max-width: 1300px;
+}
+
+section > h2 > span {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-right: 0.25rem;
 }
 /* .canvas{
   position: fixed;

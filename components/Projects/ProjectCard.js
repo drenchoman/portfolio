@@ -1,9 +1,11 @@
 import React from 'react'
 import styles from '../../styles/Projects.module.css'
 
-export default function ProjectCard({proj}) {
+
+export default function ProjectCard({proj, isVisible}) {
+
   return (
-    <div id={proj.id} className={styles.card} >
+    <div id={proj.id}  className={`${isVisible ? styles.card : styles.pre}`} >
       <div className={styles.headerCard}>
         <h3>{proj.name}</h3>
       </div>

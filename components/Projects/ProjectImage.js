@@ -1,12 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from '../../styles/Projects.module.css'
-import {CgScreen} from 'react-icons/cg'
 
-export default function ProjectImage({img}) {
+
+export default function ProjectImage({img, isVisible}) {
+
+
   return (
-    <div className={styles.imgWrapper}>
-    <CgScreen className={styles.screen}/>
+    <div className={`${isVisible ? styles.imgWrapper :styles.hiddenWrapper}`}>
+  
    
     <div className={styles.imageWrapper}>
         <Image

@@ -4,7 +4,8 @@ import bg from '../../public/abstract.jpeg'
 import me from '../../public/me.jpeg'
 import vc from '../../public/vc.jpg'
 import ye from '../../public/ye.jpg'
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'
+// import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls'
+import {BiLike, BiLinkExternal} from 'react-icons/bi'
 
 
 export default function Three() {
@@ -27,7 +28,7 @@ export default function Three() {
     renderer.setSize(window.innerWidth, window.innerHeight)
   }
 
-  const controls = new OrbitControls(camera, renderer.domElement)
+  // const controls = new OrbitControls(camera, renderer.domElement)
 
 
   const meTexture = new THREE.TextureLoader().load(me.src)
@@ -59,8 +60,8 @@ const geometry = new THREE.BoxGeometry(6,6,6);
 
 // each cube side gets another color
 const cubeMaterials = [ 
-    new THREE.MeshStandardMaterial({color:0x5CB8E4,  transparent:true, opacity:0.5}),
-    new THREE.MeshStandardMaterial({color:0x5CB8E4, transparent:true, opacity:0.5}), 
+    new THREE.MeshStandardMaterial({color:0xFFFFFF,  transparent:true, opacity:0.5}),
+    new THREE.MeshStandardMaterial({color:0xFFFFFF, transparent:true, opacity:0.5}), 
     new THREE.MeshStandardMaterial({color:0xFFFFFF, transparent:true, opacity:0.5}),
     new THREE.MeshStandardMaterial({color:0xFFFFFF, transparent:true, opacity:0.5}), 
     new THREE.MeshStandardMaterial({color:0xFFFFFF,map: meTexture, transparent:true, opacity:0.9}), 
@@ -79,7 +80,7 @@ const pc = new THREE.Mesh(pcGeo,[
   new THREE.MeshBasicMaterial({color: 0x5CB8E4}),
   new THREE.MeshBasicMaterial({color: 0x5CB8E4}),
   new THREE.MeshBasicMaterial({color: 0x5CB8E4}),
-  new THREE.MeshBasicMaterial({color: 0x5CB8E4}),
+  new THREE.MeshBasicMaterial({color: 0x5CB8E4, }),
   new THREE.MeshBasicMaterial({color: 0xFFFFFF, map: vcTexture}),
   new THREE.MeshBasicMaterial({color: 0x5CB8E4}),
 ]
@@ -106,14 +107,14 @@ const b = document.querySelector('#__next')
 
 const bRect = b.getBoundingClientRect()
 const mRect = m.getBoundingClientRect()
-console.log(mRect);
-console.log(bRect)
+// console.log(mRect);
+// console.log(bRect)
 
 const stickYPos = -10
 const baseYPos = -15
 const topPos = mRect.top * -0.07
-console.log(topPos);
-console.log(mRect.top);
+// console.log(topPos);
+// console.log(mRect.top);
 
 pc.position.set(0,topPos,-100)
 stick.position.set(0,topPos + stickYPos,-100)
@@ -168,8 +169,8 @@ const moveCamera = () => {
   camera.position.y = t * -0.002
 
   moveCube(t)
-  console.log(t);
-  console.log(mRect.top);
+  // console.log(t);
+  // console.log(mRect.top);
   // movePc(t)
   // const zz = document.querySelector('#vc')
   // const bRect = document.body.getBoundingClientRect()
@@ -207,7 +208,7 @@ document.body.onscroll = moveCamera
     // rotateBox(knot)
     rotateBox(cube)
 
-    controls.update()
+    // controls.update()
     renderer.render(scene, camera)
   }
 

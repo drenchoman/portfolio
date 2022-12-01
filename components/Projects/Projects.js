@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from '../../styles/Projects.module.css'
 import Container from './Container'
-import ye from '../../public/ye.jpg'
-import vc from '../../public/vc.jpg'
+import ye from '../../public/yee.svg'
+import vc from '../../public/iPhone 14.svg'
 import {BiLike, BiLinkExternal} from 'react-icons/bi'
 
 
@@ -34,7 +34,7 @@ export default function Projects() {
   ]
   return (
     <section className={styles.section}>
-      <h2>Projects</h2>
+      <h2><span>02.</span>PROJECTS</h2>
       <div className={styles.wrapper}>
         {proj.map((x) => (
                   <Container key={x.id} proj={x} />
