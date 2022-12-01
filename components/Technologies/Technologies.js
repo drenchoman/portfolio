@@ -9,7 +9,7 @@ import styles from '../../styles/Technologies.module.css'
 export default function Technologies() {
   const tech = [{
     id:1,
-    header: 'Core',
+    header: 'CORE',
     description: 'The Core Technologies I use on a daily basis',
     technologies:[
      
@@ -33,7 +33,7 @@ export default function Technologies() {
   
   {
     id: 2,
-    header: 'Front End',
+    header: 'FRONT END',
     description: 'Front End Weapons of Choice',
     technologies:[
       {
@@ -50,7 +50,7 @@ export default function Technologies() {
   },
   {
     id: 3,
-    header: 'Back End',
+    header: 'BACK END',
     description: 'The tools that do the heavy lifting',
     technologies:[
       {
@@ -71,7 +71,7 @@ export default function Technologies() {
   },
   {
     id: 4,
-    header: 'Other Tools',
+    header: 'OTHER TOOLS',
     description: 'Everyday workflow tools & databases I have worked with',
     technologies:[
       {
@@ -102,7 +102,7 @@ export default function Technologies() {
 
   return (
     <section className={styles.section}>
-      <h2>Technologies</h2>
+      <h2><span>01.</span>TECH</h2>
       <div className={styles.wrapper}>
 
       

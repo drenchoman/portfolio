@@ -1,6 +1,12 @@
 :root{
   --card-color: #3c4043;
   --background-color: #202124;
+  --c1: #3F3B6C;
+  --c2: #624F82;
+  --c3: #9F73AB;
+  --c4: #0014FF;
+  --animation-delay: 0.7s
+  
 }
 
 html,
@@ -9,6 +15,10 @@ body {
   margin: 0;
   font-family: 'Lato', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    
 }
 
 a {
@@ -20,12 +30,34 @@ a {
   box-sizing: border-box;
 }
 
+canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+section{
+  margin: 1rem auto;
+  max-width: 1300px;
+}
+
+section > h2 > span {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-right: 0.25rem;
+}
+/* .canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+} */
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
   body {
-    color: white;
+    color: black;
     background: var(--background-color);
   }
 }

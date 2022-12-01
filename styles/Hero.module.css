@@ -3,9 +3,10 @@
   width: 100%;
   position: relative;
   max-width: 1300px;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 0 auto;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
 }
 
 .names{
@@ -14,6 +15,7 @@
   max-width: 1000px;
   position: relative;
   margin: 0 auto;
+  color: black;
 }
 
 .image{
@@ -28,7 +30,7 @@
 .names > div {
   font-size: 7.5rem;
   letter-spacing: 0.5rem;
-  margin: -0.5rem 0;
+  margin: -1rem 0;
 }
 
 .names > div:nth-child(1){
@@ -43,12 +45,50 @@
 .names > div:nth-child(3){
   font-weight: 900;
   padding-left: 5rem;
+  animation: background-pan 3s linear infinite;
+
+  background: linear-gradient(
+    to right,
+    var(--c1),
+    var(--c2),
+    var(--c3),
+    var(--c1)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  background-size: 200%;
 
 }
+@keyframes background-pan { 
+  from{
+    background-position: 0% center;
+  }
+  to{
+    background-position: -200% center;
+  }
+  
+}
+
 
 .names > div:nth-child(4){
   font-weight: 900;
   padding-left: 7.5rem;
+  animation: background-pan 3s linear infinite;
+
+  background: linear-gradient(
+    to right,
+    var(--c1),
+    var(--c2),
+    var(--c3),
+    var(--c1)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  background-size: 200%;
 
 }
 
