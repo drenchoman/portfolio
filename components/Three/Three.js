@@ -120,9 +120,9 @@ pc.position.set(0,topPos,-100)
 stick.position.set(0,topPos + stickYPos,-100)
 base.position.set(0,topPos + baseYPos,-100)
 
-scene.add(pc)
-scene.add(stick)
-scene.add(base)
+// scene.add(pc)
+// scene.add(stick)
+// scene.add(base)
 
 
 // const positionPc = () => {

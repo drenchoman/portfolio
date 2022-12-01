@@ -1,11 +1,17 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import styles from '../../styles/Projects.module.css'
 
 
 export default function ProjectCard({proj, isVisible}) {
-
+  const [show,setShow] = useState(false)
+  useEffect(() => {
+    if (isVisible){
+      setShow(true)
+    }
+  },[isVisible])
+  
   return (
-    <div id={proj.id}  className={`${isVisible ? styles.card : styles.pre}`} >
+    <div id={proj.id}  className={`${show ? styles.card : styles.pre}`} >
       <div className={styles.headerCard}>
         <h3>{proj.name}</h3>
       </div>

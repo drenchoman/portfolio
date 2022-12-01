@@ -8,7 +8,6 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-overflow: scroll;
 }
 
 
@@ -19,7 +18,7 @@ overflow: scroll;
   margin: 1.5rem 0;
   justify-content: center;
   position: relative;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .container:nth-child(even){
@@ -36,6 +35,7 @@ overflow: scroll;
   /* background-color: var(--card-color); */
   padding: 1.5rem;
   /* align-items: center; */
+  z-index: 3;
 
 /* From https://css.glass */
 background: rgba(255, 255, 255, 0.2);
@@ -158,7 +158,7 @@ font-weight: 800;
 
 .imageWrapper{
   /* position: absolute; */
-  width: clamp(300px, 30vw, 700px);
+  width: clamp(250px, 30vw, 700px);
   /* height:  300px; */
   position: relative; 
   overflow: hidden;
@@ -275,17 +275,38 @@ margin:0;
 
 @media screen and (max-width: 420px) {
   .container{
-    flex-direction: row;
-    margin: 0;
+    flex-direction: column-reverse;
+    margin: 0.5rem 0;
+    width: 100%;
+    min-width: 320px;
+    
   }
   .card{
     padding: 1rem;
+    margin: 1.5rem 0;
+    flex-basis:500px;
   }
   .container:nth-child(odd){
-    flex-direction: row;
+    flex-direction: column-reverse;
   }
   .container:nth-child(even){
-    flex-direction: row;
+    flex-direction: column-reverse;
+  }
+  .imageWrapper{
+    display: flex;
+    position: relative;
+    height:300px;
+  
+  }
+  .imgWrapper{
+    display: flex;
+    height:300px;
+    /* position: absolute; */
+   /* bottom: -4rem;
+   right: -2rem;
+   z-index: 0;
+    transform: translateY(100px) */
+    
   }
 
   
