@@ -24,7 +24,6 @@ export default function ProjectImage({img}) {
         layout='fill'
         objectFit='contain'
         alt="hello"
-
         />
 
    

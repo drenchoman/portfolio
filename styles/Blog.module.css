@@ -139,7 +139,7 @@ overflow: hidden;
 .imageWrapper > img:hover{
   transform: scale(1.1);
   transition: 1s;
-  cursor: pointer;
+  
 }
 
 .imageWrapper > img{
