@@ -172,7 +172,7 @@ display: inline-block;
 
 .wrapper > .container:nth-child(1) > .card > .headerCard > h3::before{
   content: "";
-  width:325px;
+  width:340px;
   display: inline-block;
   opacity: 0.2;
   height:50px;
@@ -180,14 +180,13 @@ display: inline-block;
   position: absolute;
   left: -0.5rem;
   top:-0.25rem;
-  border-radius: 16px;
 }
 
 
 
 .wrapper > .container:nth-child(2) > .card > .headerCard > h3::before{
   content: "";
-  width:205px;
+  width:215px;
   display: inline-block;
   opacity: 0.2;
   height:50px;
@@ -195,7 +194,6 @@ display: inline-block;
   position: absolute;
   left: -0.5rem;
   top:-0.25rem;
-  border-radius: 16px;
 }
 
 
@@ -306,6 +304,10 @@ display: inline-block;
   /* text-decoration: underline; */
   gap: 0.25rem;
   border-bottom: 1px solid black;
+}
+
+.links:hover{
+  cursor: pointer;
 }
 
 .bwWrapper{

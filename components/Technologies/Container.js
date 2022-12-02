@@ -19,7 +19,7 @@ export default function Container({tech}) {
       <div className={`${styles.techWrapper} ${show ? styles.animation : null}`}>
 
       {tech.technologies.map((x, i) => (
-        <div key={i.id} className={styles.techCard}>
+        <div key={i} className={styles.techCard}>
         <h3>{x.name}</h3>
         <TechImage  name={x.name} icon={x.icon} />
         </div>

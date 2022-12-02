@@ -3,6 +3,17 @@
   overflow: hidden;
 }
 
+.test{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../public/abstract.jpeg');
+  object-fit: cover;
+  flex-direction: column;
+}
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
