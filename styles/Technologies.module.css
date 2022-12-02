@@ -77,7 +77,115 @@ animation: alive 0.7s ease-in-out forwards;
   opacity: 0;
   animation: fade 0.7s ease-in-out forwards;
   animation-delay: 0.7s;
+  display: flex;
+  position: relative;
+ 
 }
+
+.wrapper > .card:nth-child(1) > h3::before{
+  content: "";
+  width:50px;
+  display: inline-block;
+  opacity: 0.2;
+  height:35px;
+  background-color: var(--c1);
+  position: absolute;
+  left: -0.5rem;
+  top:-0.25rem;
+  border-radius: 16px;
+}
+
+.wrapper > .card:nth-child(1) > h3::after {
+  content: "";
+  width:50px;
+  display: inline-block;
+  opacity: 0.1;
+  height:35px;
+  background-color: var(--c1);
+  position: absolute;
+  right: -0.5rem;
+  bottom:-0.25rem;
+  border-radius: 16px;
+}
+.wrapper > .card:nth-child(2) > h3::before{
+  content: "";
+  width:85px;
+  display: inline-block;
+  opacity: 0.2;
+  height:35px;
+  background-color: var(--c1);
+  position: absolute;
+  left: -0.5rem;
+  top:-0.25rem;
+  border-radius: 16px;
+}
+.wrapper > .card:nth-child(2) > h3::after {
+  content: "";
+  width:85px;
+  display: inline-block;
+  opacity: 0.1;
+  height:35px;
+  background-color: var(--c1);
+  position: absolute;
+  right: -0.5rem;
+  bottom:-0.25rem;
+  border-radius: 16px;
+  background-blend-mode: color-dodge;
+}
+
+.wrapper > .card:nth-child(3) > h3::before{
+  content: "";
+  width:85px;
+  display: inline-block;
+  opacity: 0.2;
+  height:35px;
+  background-color: var(--c1);
+  position: absolute;
+  left: -0.5rem;
+  top:-0.25rem;
+  border-radius: 16px;
+}
+.wrapper > .card:nth-child(3) > h3::after {
+  content: "";
+  width:85px;
+  display: inline-block;
+  opacity: 0.1;
+  height:35px;
+  background-color: var(--c1);
+  position: absolute;
+  right: -0.5rem;
+  bottom:-0.25rem;
+  border-radius: 16px;
+  background-blend-mode: color-dodge;
+}
+
+.wrapper > .card:nth-child(4) > h3::before{
+  content: "";
+  width:100px;
+  display: inline-block;
+  opacity: 0.2;
+  height:35px;
+  background-color: var(--c1);
+  position: absolute;
+  left: -0.5rem;
+  top:-0.25rem;
+  border-radius: 16px;
+}
+.wrapper > .card:nth-child(4) > h3::after {
+  content: "";
+  width:100px;
+  display: inline-block;
+  opacity: 0.1;
+  height:35px;
+  background-color: var(--c1);
+  position: absolute;
+  right: -0.5rem;
+  bottom:-0.25rem;
+  border-radius: 16px;
+  background-blend-mode: color-dodge;
+}
+
+
 
 .card> p{
   font-size: 1rem;

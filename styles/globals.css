@@ -1,10 +1,11 @@
 :root{
   --card-color: #3c4043;
   --background-color: #202124;
-  --c1: #3F3B6C;
-  --c2: #624F82;
-  --c3: #9F73AB;
+  --c1: #009EFF;
+  --c2: #00E7FF;
+  --c3: #00FFF6;
   --c4: #0014FF;
+  --c5: #7743DB;
   --animation-delay: 0.7s
   
 }
