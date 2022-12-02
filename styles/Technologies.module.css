@@ -81,18 +81,29 @@ animation: alive 0.7s ease-in-out forwards;
   position: relative;
  
 }
-
 .wrapper > .card:nth-child(1) > h3::before{
   content: "";
-  width:50px;
-  display: inline-block;
-  opacity: 0.2;
-  height:35px;
   background-color: var(--c1);
   position: absolute;
+  display: inline-block;
+  opacity: 0.2;
+}
+
+.wrapper > .card:nth-child(1) > h3::after{
+  content: "";
+  background-color: var(--c1);
+  position: absolute;
+  display: inline-block;
+  opacity: 0.2;
+}
+
+.wrapper > .card:nth-child(1) > h3::before{
+  width:50px;
+  height:35px;
+
   left: -0.5rem;
   top:-0.25rem;
-  border-radius: 16px;
+  /* border-radius: 16px; */
 }
 
 .wrapper > .card:nth-child(1) > h3::after {
@@ -105,7 +116,6 @@ animation: alive 0.7s ease-in-out forwards;
   position: absolute;
   right: -0.5rem;
   bottom:-0.25rem;
-  border-radius: 16px;
 }
 .wrapper > .card:nth-child(2) > h3::before{
   content: "";
@@ -117,7 +127,6 @@ animation: alive 0.7s ease-in-out forwards;
   position: absolute;
   left: -0.5rem;
   top:-0.25rem;
-  border-radius: 16px;
 }
 .wrapper > .card:nth-child(2) > h3::after {
   content: "";
@@ -129,7 +138,6 @@ animation: alive 0.7s ease-in-out forwards;
   position: absolute;
   right: -0.5rem;
   bottom:-0.25rem;
-  border-radius: 16px;
   background-blend-mode: color-dodge;
 }
 
@@ -143,7 +151,6 @@ animation: alive 0.7s ease-in-out forwards;
   position: absolute;
   left: -0.5rem;
   top:-0.25rem;
-  border-radius: 16px;
 }
 .wrapper > .card:nth-child(3) > h3::after {
   content: "";
@@ -155,8 +162,6 @@ animation: alive 0.7s ease-in-out forwards;
   position: absolute;
   right: -0.5rem;
   bottom:-0.25rem;
-  border-radius: 16px;
-  background-blend-mode: color-dodge;
 }
 
 .wrapper > .card:nth-child(4) > h3::before{
@@ -169,7 +174,6 @@ animation: alive 0.7s ease-in-out forwards;
   position: absolute;
   left: -0.5rem;
   top:-0.25rem;
-  border-radius: 16px;
 }
 .wrapper > .card:nth-child(4) > h3::after {
   content: "";
@@ -181,8 +185,6 @@ animation: alive 0.7s ease-in-out forwards;
   position: absolute;
   right: -0.5rem;
   bottom:-0.25rem;
-  border-radius: 16px;
-  background-blend-mode: color-dodge;
 }
 
 

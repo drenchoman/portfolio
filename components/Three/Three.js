@@ -106,19 +106,16 @@ const m = document.querySelector('#vc')
 const b = document.querySelector('#__next')
 
 const bRect = b.getBoundingClientRect()
-const mRect = m.getBoundingClientRect()
+// const mRect = m.getBoundingClientRect()
 // console.log(mRect);
 // console.log(bRect)
 
 const stickYPos = -10
 const baseYPos = -15
-const topPos = mRect.top * -0.07
-// console.log(topPos);
-// console.log(mRect.top);
-
-pc.position.set(0,topPos,-100)
-stick.position.set(0,topPos + stickYPos,-100)
-base.position.set(0,topPos + baseYPos,-100)
+// const topPos = mRect.top * -0.07
+// pc.position.set(0,topPos,-100)
+// stick.position.set(0,topPos + stickYPos,-100)
+// base.position.set(0,topPos + baseYPos,-100)
 
 // scene.add(pc)
 // scene.add(stick)
@@ -215,7 +212,9 @@ document.body.onscroll = moveCamera
   window.addEventListener('resize', onWindowResize, false)
   animate()
 
-  return () => mountRef.current.removeChild(renderer.domElement)
+  let x = mountRef.current
+  return () => x.removeChild(renderer.domElement)
+
 
 }, [])
   

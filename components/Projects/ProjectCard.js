@@ -31,6 +31,7 @@ export default function ProjectCard({proj}) {
         </div>
         </div>
         <div className={styles.linksWrapper}>
+          
           <div className={styles.links}>
             <span>
               <a href={proj.link}>Live Site</a>
@@ -39,6 +40,7 @@ export default function ProjectCard({proj}) {
               {proj.icon}
             
           </div>
+          {proj.github != null && 
           <div className={styles.links}>
             <span>
               <a href={proj.github}>Github</a>
@@ -47,7 +49,7 @@ export default function ProjectCard({proj}) {
               {proj.icon}
             
           </div>
-          
+}
         
       </div>
     </div>
