@@ -95,12 +95,14 @@
 @media screen and (max-width: 420px){
 
   .names > div {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 0.25rem 0;
 
   }
   .names > div:nth-child(1){
     font-weight: 300;
+    padding-left: 0.5rem;
+
   }
   
   .names > div:nth-child(2){
@@ -116,7 +118,7 @@
   
   .names > div:nth-child(4){
     font-weight: 900;
-    padding-left: 2.5rem;
+    padding-left: 1.5rem;
   
   }
   .image{

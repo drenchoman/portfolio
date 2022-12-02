@@ -5,7 +5,7 @@ import Technologies from '../components/Technologies/Technologies'
 import HomePage from '../components/Home/Home'
 import Three from '../components/Three/Three'
 import Projects from '../components/Projects/Projects'
-
+import Contact from '../components/Contact/Contact'
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -25,6 +25,7 @@ export default function Home() {
        <HomePage />
        <Technologies />
        <Projects />
+       <Contact />
       </main>
 
       
