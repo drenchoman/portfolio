@@ -36,7 +36,7 @@
 
 .fade{
   animation: fade 0.7s ease-in-out forwards;
-  animation-delay: 1s;
+  animation-delay: 0.7s;
   opacity: 0;
 }
 
