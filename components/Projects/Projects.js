@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from '../../styles/Projects.module.css'
 import Container from './Container'
-import ye from '../../public/yee.svg'
-import vc from '../../public/iPhone 14.svg'
+import ye from '../../public/yegood.png'
+import vc from '../../public/goodvc.png'
 import {BiLike, BiLinkExternal} from 'react-icons/bi'
 
 
@@ -10,7 +10,7 @@ export default function Projects() {
 
   const proj = [
     {id: 'vc',
-      name: 'Vintageclothing.co.nz',
+      name: 'Vintageclothing .co.nz',
       image: vc,
       p1: "A website that connects you to small independent vintage, opshop and recycled clothing stores in NZ. I thought this project would be useful as many modern day 'opshops' are now online. Still a work in progress.",
       p2: "I used Supabase for the first time during this project and really enjoyed building with it, very easy to use with lots of good documentation.",
@@ -32,6 +32,9 @@ export default function Projects() {
 
     }
   ]
+
+
+
   return (
     <section className={styles.section}>
       <h2><span>02.</span>PROJECTS</h2>

@@ -1,17 +1,22 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
 import ProjectImage from './ProjectImage'
+import ProjectName from './ProjectName'
 import styles from '../../styles/Projects.module.css'
-import { useInView } from 'react-hook-inview'
 
 
 export default function Container({proj}) {
-  const [ref, isVisible] = useInView()
+
+  
 
   return (
-    <div ref={ref} className={styles.container}>
-      <ProjectCard isVisible={isVisible} proj={proj} />
-      <ProjectImage isVisible={isVisible} img={proj.image} />
+    <div className={styles.container}>
+      <ProjectCard  proj={proj} />
+      <div className={styles.imageCard}>
+        <ProjectName name={proj.name}/>
+        <ProjectImage  img={proj.image} />
+      </div>
+
     </div>
   )
 }

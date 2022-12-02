@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import styles from '../../styles/Projects.module.css'
+import { useInView } from 'react-hook-inview'
 
+export default function ProjectCard({proj}) {
+  const [ref, isVisible] = useInView()
 
-export default function ProjectCard({proj, isVisible}) {
   const [show,setShow] = useState(false)
   useEffect(() => {
     if (isVisible){
@@ -11,22 +13,22 @@ export default function ProjectCard({proj, isVisible}) {
   },[isVisible])
   
   return (
-    <div id={proj.id}  className={`${show ? styles.card : styles.pre}`} >
+    <div id={proj.id} ref={ref}  className={`${show ? styles.card : styles.pre}`} >
       <div className={styles.headerCard}>
         <h3>{proj.name}</h3>
       </div>
-        <div>
+      <div>
         <p>{proj.p1}</p>
         <p>{proj.p2}</p>
+      </div>
+      <div className={styles.divider}></div>
+      <div className={styles.bwWrapper}>
+        <h3>Built with</h3>
+        <div className={styles.builtWithContainer}>
+        {proj.builtWith.map((t, i) => (
+          <div className={styles.builtWith} key={i}><span>{t}</span></div>
+        ))}
         </div>
-        <div className={styles.divider}></div>
-        <div className={styles.bwWrapper}>
-          <h3>Built with</h3>
-          <div className={styles.builtWithContainer}>
-          {proj.builtWith.map((t, i) => (
-            <div className={styles.builtWith} key={i}><span>{t}</span></div>
-          ))}
-          </div>
         </div>
         <div className={styles.linksWrapper}>
           <div className={styles.links}>

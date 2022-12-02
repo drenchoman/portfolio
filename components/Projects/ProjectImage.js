@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import styles from '../../styles/Projects.module.css'
+import { useInView } from 'react-hook-inview'
 
 
-export default function ProjectImage({img, isVisible}) {
+export default function ProjectImage({img}) {
+  const [ref, isVisible] = useInView()
   const [show,setShow] = useState(false)
+  
   useEffect(() => {
     if (isVisible){
       setShow(true)
@@ -12,10 +15,10 @@ export default function ProjectImage({img, isVisible}) {
   },[isVisible])
 
   return (
-    <div className={`${show ? styles.imgWrapper :styles.hiddenWrapper}`}>
+    <div ref={ref}  className={ styles.imgWrapper }>
   
-   
-    <div className={styles.imageWrapper}>
+
+    <div className={`${show ? styles.imageWrapper: null}`}>
         <Image
         src={img}
         layout='fill'
@@ -23,6 +26,7 @@ export default function ProjectImage({img, isVisible}) {
         alt="hello"
 
         />
+
    
     </div>
     </div>

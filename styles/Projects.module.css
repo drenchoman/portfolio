@@ -25,6 +25,20 @@
   flex-direction: row-reverse;
 }
 
+.imageCard{
+  display: flex;
+  align-items: center;
+}
+.name{
+  flex-basis: 300px;
+  display: none;
+}
+.name > h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 800;
+}
+
 .card{
   display: flex;
   flex-direction: column;
@@ -90,6 +104,10 @@ animation: alive 0.7s ease-in-out forwards;
   }
 }
 
+.fade{
+  animation: fade 0.7s ease-in-out forwards;
+}
+
 .card > div {
   margin: 0.5rem 0;
 
@@ -148,8 +166,38 @@ animation: alive 0.7s ease-in-out forwards;
   font-size: clamp(1.5em, 2vw, 2em);
 margin: 0;
 font-weight: 800;
-
+position: relative;
+display: inline-block;
 }
+
+.wrapper > .container:nth-child(1) > .card > .headerCard > h3::before{
+  content: "";
+  width:325px;
+  display: inline-block;
+  opacity: 0.2;
+  height:50px;
+  background-color: var(--c1);
+  position: absolute;
+  left: -0.5rem;
+  top:-0.25rem;
+  border-radius: 16px;
+}
+
+
+
+.wrapper > .container:nth-child(2) > .card > .headerCard > h3::before{
+  content: "";
+  width:205px;
+  display: inline-block;
+  opacity: 0.2;
+  height:50px;
+  background-color: var(--c1);
+  position: absolute;
+  left: -0.5rem;
+  top:-0.25rem;
+  border-radius: 16px;
+}
+
 
 
 .card > p{
@@ -169,6 +217,32 @@ font-weight: 800;
  /* transform: scale(2); */
   /* aspect-ratio:1; */
 
+}
+.fromRight{
+  animation: fromRight 1.4s ease-in-out forwards;
+
+}
+
+@keyframes fromRight {
+  from{
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromLeft {
+  from{
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .hiddenWrapper{
@@ -204,6 +278,11 @@ font-weight: 800;
 .imgWrapper{
   display: flex;
   justify-content: center;
+  height: 100%;
+  min-height: 50px;
+  position: relative;
+  top: 1rem;
+  /* min-width: 200px; */
  
 }
 
@@ -257,7 +336,7 @@ margin:0;
   color: #ffffff;
 }
 
-.builtWith:nth-child(odd){
+.builtWith:nth-child(1){
   background-color: var(--c4);
 /* 
   background-clip: text;
@@ -265,13 +344,36 @@ margin:0;
   -webkit-text-fill-color: transparent; */
 }
 
-.builtWith:nth-child(even){
-  background-color: var(--c3);
+.builtWith:nth-child(2){
+  background-color: var(--c1);
 
   /* background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
 }
+.builtWith:nth-child(3){
+  background-color: var(--c5);
+
+  /* background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+.builtWith:nth-child(4){
+  background-color: var(--c2);
+
+  /* background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+.wrapper > .container:nth-child(1) >.imageCard > .imgWrapper > .imageWrapper {
+  animation: fromRight 1.4s ease-in-out forwards;
+}
+
+.wrapper > .container:nth-child(2) >.imageCard > .imgWrapper > .imageWrapper {
+  animation: fromLeft 1.4s ease-in-out forwards;
+}
+
 
 @media screen and (max-width: 420px) {
   .container{
@@ -294,20 +396,52 @@ margin:0;
   }
   .imageWrapper{
     display: flex;
-    position: relative;
-    height:300px;
-  
+    /* position: absolute;
+    right: -5rem;
+    z-index: 2;
+    top: 5rem; */
+    height:500px;
+    /* transform: scale(1.5); */
   }
+  
   .imgWrapper{
+    /* display: flex;
+    height:300px; */
+    min-width: 250px;
+
+  }
+  .name{
     display: flex;
-    height:300px;
-    /* position: absolute; */
-   /* bottom: -4rem;
-   right: -2rem;
-   z-index: 0;
-    transform: translateY(100px) */
-    
+  }
+  .wrapper > .container:nth-child(1) >.imageCard > .imgWrapper{
+    left: 1rem;
+  }
+  .wrapper > .container:nth-child(2) >.imageCard {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    right: 6rem;
+
+    /* position: absolute;
+    left: 2rem;
+    z-index: 2;
+    top: 5rem; */
+    /* height:300px; */
+    /* transform: scale(1.3); */
+  }
+  .wrapper > .container:nth-child(2) >.imageCard > .name {
+    position: relative;
+    left: 3rem;
   }
 
+  .wrapper > .container:nth-child(1) > .card > .headerCard > h3::before{
+    width:260px;
+  }
+
+  .wrapper > .container:nth-child(2) > .card > .headerCard > h3::before{
+    width:165px
+  }
+
+ 
   
 }
