@@ -168,32 +168,34 @@ margin: 0;
 font-weight: 800;
 position: relative;
 display: inline-block;
+/* border: 1px solid black; */
 }
 
 .wrapper > .container:nth-child(1) > .card > .headerCard > h3::before{
   content: "";
-  width:340px;
+  width:105%;
   display: inline-block;
   opacity: 0.2;
   height:50px;
   background-color: var(--c1);
   position: absolute;
-  left: -0.5rem;
-  top:-0.25rem;
+  top:-0.4rem;
+  left: -0.25rem;
 }
 
 
 
 .wrapper > .container:nth-child(2) > .card > .headerCard > h3::before{
   content: "";
-  width:215px;
+  width:105%;
   display: inline-block;
   opacity: 0.2;
   height:50px;
   background-color: var(--c1);
   position: absolute;
-  left: -0.5rem;
   top:-0.25rem;
+  left: -0.25rem;
+
 }
 
 
@@ -436,13 +438,7 @@ margin:0;
     left: 3rem;
   }
 
-  .wrapper > .container:nth-child(1) > .card > .headerCard > h3::before{
-    width:260px;
-  }
 
-  .wrapper > .container:nth-child(2) > .card > .headerCard > h3::before{
-    width:165px
-  }
 
  
   
