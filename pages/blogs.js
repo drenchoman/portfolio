@@ -26,7 +26,7 @@ export const getStaticProps = async () => {
 
 
 export default function Blogs({posts}) {
-  console.log(posts[0].frontmatter.title);
+  console.log(posts);
   return (
     <div className="main">
       <h1>hi</h1>

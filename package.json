@@ -21,7 +21,12 @@
     "react-hook-inview": "^4.5.0",
     "react-icons": "^4.6.0",
     "remark": "^14.0.2",
+    "remark-frontmatter": "^4.0.1",
+    "remark-heading-id": "^1.0.0",
     "remark-html": "^15.0.1",
-    "three": "^0.146.0"
+    "remark-iframes": "^4.0.5",
+    "remark-parse": "^10.0.1",
+    "three": "^0.146.0",
+    "unified": "^10.1.2"
   }
 }
