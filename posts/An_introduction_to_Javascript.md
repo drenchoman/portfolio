@@ -63,7 +63,7 @@ In our example, we used a **LOOP** statement. Loops are an instruction to do som
 
 If it is something that is done repeatedly then a loop is likely to be used.
 
-### The Dom {#dom}
+### The DOM {#dom}
 The DOM (Document Object Model) is a way that we can interact with a webpage. Essentially [everything on a webpage is an object](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction) that we can interact with using JS.
 
 In the code pen below we have an h1 tag with the ID header. Looking at our JS file we can see that we have first **selected the header** and **saved it to a variable**. We have then interacted with the header by changing its color to red.

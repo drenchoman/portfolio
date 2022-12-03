@@ -28,6 +28,10 @@ section > h2 {
 
 }
 
+.cover{
+  background-size: cover;
+}
+
 a {
   color: inherit;
   /* text-decoration: none; */

@@ -55,7 +55,7 @@ export default function PostPage({frontmatter, contentHtml}){
      
     <div className={styles.card}>
       <div className={styles.tags}>
-        {frontmatter.tags.map((t, i) => (
+        {frontmatter.tags.map((t, i) => (   
           <span key={i}>{t.toUpperCase()}</span>
         ))}
       </div>
