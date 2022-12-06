@@ -12,13 +12,14 @@ export default function Container({blog}) {
     if(isVisible){
       setShow(true)
     }
-  })
+  },[isVisible])
+
   return (
     <div ref={ref} className={`${show ? styles.card : styles.pre}`}>
       <div className={`${styles.cardInner} ${show ? styles.animation : null}`}>
         
         <div className={styles.imageWrapper}>
-          <Link href="/comingSoon">
+          <Link href={blog.href}>
           <Image
             src={blog.image}
             layout='fill'
@@ -34,7 +35,7 @@ export default function Container({blog}) {
         </div>
         <div className={styles.blogContainer}>
           <span>{blog.date}</span>
-          <h3><Link href="/comingSoon">
+          <h3><Link href={blog.href}>
           {blog.title}
           </Link></h3>
           <p>{blog.description}</p>

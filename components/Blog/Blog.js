@@ -4,7 +4,7 @@ import Container from './Container'
 import b1 from '../../public/b1.jpeg'
 import b2 from '../../public/b2.jpeg'
 import {BiLinkExternal} from 'react-icons/bi'
-
+import Link from 'next/link'
 
 const blogs = [
   {
@@ -13,7 +13,8 @@ const blogs = [
     image: b1,
     title: 'An Introduction to Javascript',
     description: "This introduction will cover Javascripts relationship with HTML and CSS, Control Flow & Loops, the Document Object Model + much more!",
-    date: 'July 6th, 2022'
+    date: 'July 6th, 2022',
+    href: '/posts/An_Introduction_to_Javascript'
   },
   {
     id: 2,
@@ -21,7 +22,8 @@ const blogs = [
     image: b2,
     title: 'My Approach to Problem Solving',
     description: "What I do when I am stuck on a problem and why it's more than asking Google.",
-    date: 'July 13th 2022'
+    date: 'July 13th 2022',
+    href: '/posts/problem_solving'
   }
 ]
 
@@ -38,7 +40,7 @@ export default function Blog() {
       </div>
       <div className={styles.buttonWrapper}>
         <div className={styles.button}>
-        <button>See All Blog Posts</button>
+        <button><Link href="/blogs">See All Blog Posts</Link></button>
         <BiLinkExternal/>
         </div>
       </div>
