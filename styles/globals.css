@@ -1,34 +1,32 @@
-:root{
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,700&display=swap');
+
+:root {
   --card-color: #3c4043;
   --background-color: #202124;
-  --c1: #009EFF;
-  --c2: #00E7FF;
-  --c3: #00FFF6;
-  --c4: #0014FF;
-  --c5: #7743DB;
-  --animation-delay: 0.7s
-  
+  --c1: #009eff;
+  --c2: #00e7ff;
+  --c3: #00fff6;
+  --c4: #0014ff;
+  --c5: #7743db;
+  --animation-delay: 0.7s;
 }
-
-
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Lato', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-    
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 section > h2 {
   font-size: 1.75rem;
-
 }
 
-.cover{
+.cover {
   background-size: cover;
 }
 
@@ -41,13 +39,13 @@ a {
   box-sizing: border-box;
 }
 
-canvas{
+canvas {
   position: fixed;
   top: 0;
   left: 0;
 }
 
-section{
+section {
   margin: 1rem auto;
   max-width: 1300px;
 }
@@ -58,7 +56,7 @@ section > h2 > span {
   margin-right: 0.25rem;
 }
 
-article{
+article {
   max-width: 900px;
   margin: 0 auto;
   display: flex;
@@ -66,7 +64,7 @@ article{
   padding: 0 1rem;
 }
 
-blockquote{
+blockquote {
   font-size: 2rem;
   margin: 0 auto;
   display: inline-block;
@@ -87,3 +85,20 @@ blockquote{
     background: var(--background-color);
   }
 } */
+
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  /* flex: 1; */
+}
+
+@media screen and (max-width: 420px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
