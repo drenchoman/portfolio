@@ -4,7 +4,19 @@
 }
 
 .container{
-  padding: 4rem 1rem;
+  padding: 1rem 0;
+}
+.main {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.postsWrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  
 }
 
 .wrapper{
