@@ -1,0 +1,124 @@
+---
+title: 'My Approach to Problem Solving'
+metaTitle: 'How I solve problems when I am stuck as a Software Developer.'
+metaDesc: 'In this blog I discuss my approach to problem solving when coding as well as some techniques that I have come across.'
+image: 'https://res.cloudinary.com/dbyprqeyc/image/upload/v1662610664/cld-sample-2.jpg'
+date: 'July 13th 2022'
+isPublished: true
+author: 'Oscar Harron'
+tags:
+  - web development
+  - life
+---
+
+## In this blog I discuss my approach to problem solving when coding as well as some techniques that I have come across.
+
+Before I tell you my apporach to problem solving, let me tell you about a time I was stuck on a simple problem.
+
+### The Problem
+
+I was working on the [Super Fizz Buzz Challenge](https://replit.com/@drenchoman/Super-FizzBuzz#index.js). The object of Fizz Buzz is to return any number divisble by three with the word 'Fizz', any number divisible by five with the word 'Buzz' and any number divisible by both three and five with the word 'FizzBuzz'.
+
+I came up with a solution and it was working okay...ish but I had one small issue. My code was converting the number to "Fizz" but also returning the number (3) afterwards aswell.
+
+![My nonworking code](../public/blogs/my-approach/problem.jpeg)
+
+I didn't understand why my code wasn't working. I tried console logging, talking through my problem and googling.
+
+img
+
+I felt frustrated. I wanted to flip a table and say mean things abput my abilities, **why doesn't this work!**
+
+img
+
+Eventually I stumbled on the answer. I didn't **have an else statement**.
+
+I added the else statement and _voilà_, it was working perfectly.
+
+img
+
+I always though you didn't need to **explicitly state the else statement**. Turns out I was wrong and in some cases you do. All that frustration but at least I learn something in the end and I don't think I will make the same mistake again.
+
+### An Elegant Solution
+
+What made my experience all the more frustrating was how elegantly I had solved the regular Fizz Buzz challenge.
+
+I wrote up some pseudocode, wrote my if statements in a away that made logical sense and complete the challenge after a small amount of googling.
+
+The main thing that I did to solve the problem was scrubbing up on using the [https://www.w3schools.com/js/js_arithmetic.asp](Modulus operator) to solve the problem.
+
+img
+
+I felt pretty good when solving this problem, I had done it fairly quickly but I am sure it could be improved upon.
+
+I learnt to have a plan before starting and to understand what tools or methods (or arithmetic!) you might need.
+
+### My Approach to Problem Solving
+
+Here is a beautiful list of problem-solving techniques, those in bold I do more than others.
+
+- Pseudocode
+- **Trying something**
+- Rubber Ducky Method
+- **Reading error messages**
+- **Console.logging**
+- **Googling**
+- **Asking your peers for help**
+- Asking coaches for help
+- Improving your process with reflection
+
+All of these techniques are valuable but why?
+
+#### Pseudocode
+
+Pseudocode is great for beaking down a larger complex problem into smaller steps. It is very useful since it gives you a rough guide to solving your issue.
+
+I feel condifent using this technique but I have to remind myself to use it. Often I will rush into _solve mode_ without fully considering the problem. You can easily get stuck this way and maybe go down a path you wouldn't of if you planned your solution in the beginning!
+
+#### Trying something
+
+Ahh yes. My favourite technqiue, perhaps not the most elegant or sophisticated but I think it is a great way to learn.
+
+You quickly figure out if something works or not with this method. Try not to be a monkey on a typewriter with this method, have an understanding of **why** something might work before you try it.
+
+img
+
+#### Rubber Ducky Method
+
+A method I use when I am super stuck on an issue except I talk to my partner who has 0 knowledge of coding. Sometimes she will get frustrated with me because she thinks I expect an answer from her. Sorry Katelyn!
+
+It is very useful because **you talk about the problem in plain language** and often solve the problem as your are saying it!
+
+I didn't actually know this technique had a name, despite having used it many times. Perhaps I should talk to an inanimate object instead though. **Relationship Advice 101**.
+
+#### Reading Error Messages and Googling
+
+These two go hand in hand for me. If the error message is simple to understand then usually I will be able to pinpoint the issue in my code. If it is long and complex I will often copy and paste the error message along with the programming language into Google which will return a result.
+
+Every issue you come across, someone has probably already experienced it. Google is amazing for problem solving, **this is the bread and butter of a Software Developer**.
+
+img
+
+#### Console Logging
+
+A useful technique that I use often. It is great for understanding when functions run in your control flow and for testing functions in general.
+
+It is also very useful for debugging. For example, when you are trying to figure out what type of data a parameter is, **console.log(typeof your-var)** is super useful in these situations.
+
+#### Ask your peers/coaches for help
+
+Another technique I use infrequently, often when I am super stuck and I haven't been able to make much progress on my own.
+
+This technique is useful because your peers can provide you direction and help you consider a solution that you might not think of on your own. Be sure to come with what you have tried as this will help with problem solving.
+
+**Do not be afraid or ashamed to ask for help! People are a lot kinder than they appear!**
+
+img
+
+#### Improving your process with reflection
+
+A technique I use after solving a difficult problem. I think it is important to take a step back and say 'Okay, what went well, what went wrong, and what could I do better next time'.
+
+Reflection will make your next encounter with a similar problem much easier as we can pull from our wisdom and previous experience.
+
+I would also encourage reflection **when things go well**. This is not something I do often but it can be useful in reinforcing positive habits and processes.

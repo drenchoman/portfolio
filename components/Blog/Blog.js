@@ -9,7 +9,7 @@ import Link from 'next/link';
 const blogs = [
   {
     id: 1,
-    tags: ['Web Development'],
+    tags: ['Web Development', 'Javascript'],
     image: b1,
     title: 'An Introduction to Javascript',
     description:
@@ -25,7 +25,7 @@ const blogs = [
     description:
       "What I do when I am stuck on a problem and why it's more than asking Google.",
     date: 'July 13th 2022',
-    href: '/blog/problem-solving',
+    href: '/blog/My-Approach-to-Problem-Solving',
   },
 ];
 
