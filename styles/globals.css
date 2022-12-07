@@ -56,6 +56,12 @@ section > h2 > span {
   margin-right: 0.25rem;
 }
 
+section > h1 > span {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-right: 0.25rem;
+}
+
 article {
   max-width: 900px;
   margin: 0 auto;

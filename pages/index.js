@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
 import Technologies from '../components/Technologies/Technologies';
 import HomePage from '../components/Home/Home';
 import Navbar from '../components/Navbar/Navbar';
@@ -31,7 +30,7 @@ export default function Home() {
         <Technologies />
         <Projects />
         <Blog />
-        <Contact />
+        <Contact num="04" />
         <Footer />
       </main>
     </div>
