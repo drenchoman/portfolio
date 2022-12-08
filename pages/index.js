@@ -9,7 +9,29 @@ import Blog from '../components/Blog/Blog';
 import Contact from '../components/Contact/Contact';
 import Footer from '../components/Footer/Footer';
 
-export default function Home() {
+import { getAllArticles } from '../src/utils/mdx';
+
+export async function getStaticProps() {
+  const articles = await getAllArticles();
+
+  articles
+    .map((article) => article.data)
+    .sort((a, b) => {
+      if (a.data.publishedAt > b.data.publishedAt) return 1;
+      if (a.data.publishedAt < b.data.publishedAt) return -1;
+
+      return 0;
+    });
+
+  return {
+    props: {
+      posts: articles.reverse(),
+    },
+  };
+}
+
+export default function Home({ posts }) {
+  console.log(posts);
   return (
     <div className={'container'}>
       <Head>
@@ -29,7 +51,7 @@ export default function Home() {
         <HomePage />
         <Technologies />
         <Projects />
-        <Blog />
+        <Blog posts={posts} />
         <Contact num="04" />
         <Footer />
       </main>

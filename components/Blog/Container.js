@@ -3,8 +3,14 @@ import styles from '../../styles/Blog.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useInView } from 'react-hook-inview';
+import dayjs from 'dayjs';
 
-export default function Container({ blog }) {
+export default function Container({ frontMatter }) {
+  console.log(frontMatter.publishedAt);
+  const publishedAt = dayjs(frontMatter.publishedAt)
+    .format('DD MMM YYYY')
+    .toUpperCase();
+  console.log(publishedAt);
   const [ref, isVisible] = useInView();
   const [show, setShow] = useState(false);
   useEffect(() => {
@@ -20,10 +26,10 @@ export default function Container({ blog }) {
           show ? styles.animation : null
         }`}
       >
-        <Link href={blog.href}>
+        <Link href={`/blog/${frontMatter.slug}`} passHref>
           <div className={styles.imageWrapper}>
             <Image
-              src={blog.image}
+              src={frontMatter.image}
               fill
               sizes="(max-width: 1200px) 100vw"
               style={{ objectFit: 'cover' }}
@@ -33,16 +39,19 @@ export default function Container({ blog }) {
         </Link>
 
         <div className={styles.tagsContainer}>
-          {blog.tags.map((t, i) => (
-            <span key={i}>{t.toUpperCase()}</span>
+          {frontMatter.tags.map((tag, i) => (
+            <span key={i}>{tag.toUpperCase()}</span>
           ))}
         </div>
         <div className={styles.blogContainer}>
-          <span>{blog.date}</span>
-          <h3>
-            <Link href={blog.href}>{blog.title}</Link>
-          </h3>
-          <p>{blog.description}</p>
+          <span>
+            {publishedAt}
+            &mdash; {frontMatter.readingTime}
+          </span>
+          <Link href={`/blog/${frontMatter.slug}`} passHref>
+            <h3>{frontMatter.title}</h3>
+          </Link>
+          <p>{frontMatter.excerpt}</p>
         </div>
       </div>
     </div>
