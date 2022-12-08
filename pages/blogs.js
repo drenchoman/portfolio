@@ -5,6 +5,8 @@ import matter from 'gray-matter';
 import styles from '../styles/Posts.module.css';
 import Navbar from '../components/Navbar/Navbar';
 import Preview from '../components/Blog/Preview';
+import Footer from '../components/Footer/Footer';
+import Contact from '../components/Contact/Contact';
 
 export const getStaticProps = async () => {
   const files = fs.readdirSync('posts');
@@ -39,12 +41,18 @@ export default function Blogs({ posts }) {
 
       <main className={'main'}>
         <Navbar />
-        <h1>Posts</h1>
-        <div className={styles.postsWrapper}>
-          {posts.map((blogPost, i) => (
-            <Preview key={i} blogPost={blogPost} />
-          ))}
-        </div>
+        <section className={styles.sectionAll}>
+          <h1>
+            <span>01</span>ALL POSTS
+          </h1>
+          <div className={styles.postsWrapper}>
+            {posts.map((blogPost, i) => (
+              <Preview key={i} blogPost={blogPost} />
+            ))}
+          </div>
+        </section>
+        <Contact num={'02'} />
+        <Footer />
       </main>
     </div>
   );

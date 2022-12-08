@@ -1,9 +1,10 @@
 ---
+id: 1
 title: 'An Introduction to Javascript'
 metaTitle: 'An Introduction to Javascript for Beginners'
-metaDesc: 'A basic introduction to Javascript, looking at the DOM, control flow and basic functions.'
+excerpt: 'A basic introduction to Javascript, looking at the DOM, control flow and basic functions.'
 image: 'https://res.cloudinary.com/dbyprqeyc/image/upload/v1662610664/cld-sample-2.jpg'
-date: 'July 6th 2022'
+publishedAt: 07-06-2022
 isPublished: true
 author: 'Oscar Harron'
 tags:
@@ -13,13 +14,14 @@ tags:
 
 ## A basic introduction to Javascript, looking at the DOM, control flow and basic functions.
 
-**Hooray!**  You are levelling up your developer skills and have reached a new level. Welcome to Javascript (JS), now things are about to get interesting.
+**Hooray!** You are levelling up your developer skills and have reached a new level. Welcome to Javascript (JS), now things are about to get interesting.
 
 This introduction will cover Javascripts [relationship](#user-content-js) with HTML and CSS, [Control Flow & Loops](#user-content-control), the Document Object Model or [DOM](#user-content-dom), the difference between [Arrays and Objects](#user-content-arrays-objects), as well as an explanation of [functions](#user-content-functions-header) and why they are useful.
 
 Interested in only a particular topic? Click any of the links above to jump ahead, don't worry, I won't be too upset.
 
 ### JS and its relationship to HTML and CSS {#js}
+
 A simple way to understand the relationship between the **holy trinity of the Web** is to think of it as a house. A house will generally have walls, a roof, different sized rooms and all the snazzy appliances which make living easier.
 
 **HTML** can be thought of as the structure of the house, it is the walls and roof. Without this fundamental struture there would be no house, just your things scattered around on an empty plot of land.
@@ -33,27 +35,28 @@ On a webpage, JS would do things such as handle the interactions when you click 
 JS provides the **logic, rules and functionality** to a webpage and it is rare to find a website that doesn't use JS in some capacity
 
 ### Control Flow & Loops {#control}
+
 Control Flow refers to the **order in which your computer will run your code**. It is a set of instructions that are followed in order. Code will be followed exactly as we describe it so we have to be precise in how we give our instructions.
 
 In JS, our code is read from top to bottom until it reaches instructions which change the control flow. These could be instructions such **if...else** or **loops**.
 
 To demonstrate control flow we will use the example of making an instant coffee.
 
-* Grab jug
-* Fill jug with water
-* Place jug on base
-* Turn jug on
-* Grab cup
-* Grab coffee
-* Grab teaspoon
-* **LOOP :** Open coffee, insert teaspoon and collect a teaspoon of coffee. Place coffee into cup, do this two times.
-* Check if water is boiled
-* **IF :** If water is boiler, fill cup till it is 75% full. **ELSE:** Otherwise wait till water is boiled
-* Grab milk
-* Add milk till cup is 95% full
-* Grab teaspoon
-* **LOOP :** Stir coffee, water and milk together until it looks drinkable (a computer would understand that right?)
-* Grab cup and drink coffee
+- Grab jug
+- Fill jug with water
+- Place jug on base
+- Turn jug on
+- Grab cup
+- Grab coffee
+- Grab teaspoon
+- **LOOP :** Open coffee, insert teaspoon and collect a teaspoon of coffee. Place coffee into cup, do this two times.
+- Check if water is boiled
+- **IF :** If water is boiler, fill cup till it is 75% full. **ELSE:** Otherwise wait till water is boiled
+- Grab milk
+- Add milk till cup is 95% full
+- Grab teaspoon
+- **LOOP :** Stir coffee, water and milk together until it looks drinkable (a computer would understand that right?)
+- Grab cup and drink coffee
 
 > Who knew making a coffee could be so difficult?
 
@@ -64,6 +67,7 @@ In our example, we used a **LOOP** statement. Loops are an instruction to do som
 If it is something that is done repeatedly then a loop is likely to be used.
 
 ### The DOM {#dom}
+
 The DOM (Document Object Model) is a way that we can interact with a webpage. Essentially [everything on a webpage is an object](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction) that we can interact with using JS.
 
 In the code pen below we have an h1 tag with the ID header. Looking at our JS file we can see that we have first **selected the header** and **saved it to a variable**. We have then interacted with the header by changing its color to red.

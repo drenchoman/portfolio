@@ -4,7 +4,7 @@ import { BsGithub, BsLinkedin, BsInstagram } from 'react-icons/bs';
 import { useInView } from 'react-hook-inview';
 const size = 32;
 
-export default function Contact() {
+export default function Contact({ num }) {
   const [ref, isVisible] = useInView();
   const [show, setShow] = useState(false);
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function Contact() {
   return (
     <section className={styles.section}>
       <h2>
-        <span>04</span>CONTACT
+        <span>{num}</span>CONTACT
       </h2>
       <div className={styles.wrapper}>
         <div
