@@ -1,44 +1,23 @@
-import fs from 'fs';
-import matter from 'gray-matter';
-import { remark } from 'remark';
 import Head from 'next/head';
-import html from 'remark-html';
-import remarkHeadingId from 'remark-heading-id';
+import { MDXRemote } from 'next-mdx-remote';
+import { serialize } from 'next-mdx-remote/serialize';
+import rehypeSlug from 'rehype-slug';
 import styles from '../../styles/Posts.module.css';
 import Image from 'next/image';
+import 'highlight.js/styles/atom-one-dark-reasonable.css';
 import me from '../../public/me.jpeg';
 import Navbar from '../../components/Navbar/Navbar';
+import { getArticleFromSlug, getSlug } from '../../src/utils/mdx';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeHighlight from 'rehype-highlight';
+import rehypeCodeTitles from 'rehype-code-titles';
+import dayjs from 'dayjs';
 
-export async function getStaticPaths() {
-  const files = fs.readdirSync('posts');
-  const paths = files.map((fileName) => ({
-    params: {
-      slug: fileName.replace('.md', ''),
-    },
-  }));
-  return {
-    paths,
-    fallback: false,
-  };
-}
+export default function PostPage({ post: { source, frontmatter } }) {
+  const publishedAt = dayjs(frontmatter.publishedAt).format(
+    'DD MMM YYYY'
+  );
 
-export async function getStaticProps({ params: { slug } }) {
-  const fileName = fs.readFileSync(`posts/${slug}.md`, 'utf-8');
-  const { data: frontmatter, content } = matter(fileName);
-  const processedContent = await remark()
-    .use(html)
-    .use(remarkHeadingId)
-    .process(content);
-  const contentHtml = processedContent.toString();
-  return {
-    props: {
-      frontmatter,
-      contentHtml,
-    },
-  };
-}
-
-export default function PostPage({ frontmatter, contentHtml }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -69,22 +48,71 @@ export default function PostPage({ frontmatter, contentHtml }) {
               />
             </div>
             <span>{frontmatter.author}</span>
-            <span>{frontmatter.date}</span>
+            <span>
+              {publishedAt}
+              &mdash; {frontmatter.readingTime}
+            </span>
           </div>
           <div className={styles.blogImage}>
             <Image
               src={frontmatter.image}
+              fill
+              sizes="(max-width: 1200px) 100vw"
+              style={{ objectFit: 'cover' }}
               alt="Blog Image"
-              objectFit="cover"
-              layout="fill"
             />
           </div>
         </div>
 
-        <article
-          dangerouslySetInnerHTML={{ __html: contentHtml }}
-        ></article>
+        <article>
+          <MDXRemote {...source} components={{ Image }} />
+        </article>
       </section>
     </div>
   );
+}
+
+export async function getStaticPaths() {
+  // getting all paths of each article as an array of
+  // objects with their unique slugs
+  const paths = (await getSlug()).map((slug) => ({
+    params: { slug },
+  }));
+
+  return {
+    paths,
+    // in situations where you try to access a path
+    // that does not exist. it'll return a 404 page
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const { slug } = params;
+  const { content, frontmatter } = await getArticleFromSlug(slug);
+
+  const mdxSource = await serialize(content, {
+    mdxOptions: {
+      rehypePlugins: [
+        rehypeSlug,
+        [
+          rehypeAutolinkHeadings,
+          {
+            properties: { className: ['anchor'] },
+          },
+          { behaviour: 'wrap' },
+        ],
+        rehypeHighlight,
+        rehypeCodeTitles,
+      ],
+    },
+  });
+  return {
+    props: {
+      post: {
+        source: mdxSource,
+        frontmatter,
+      },
+    },
+  };
 }

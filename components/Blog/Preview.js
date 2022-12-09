@@ -3,10 +3,14 @@ import styles from '../../styles/Blog.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useInView } from 'react-hook-inview';
+import dayjs from 'dayjs';
 
-export default function Preview({ blogPost }) {
+export default function Preview({ frontMatter }) {
   const [ref, isVisible] = useInView();
   const [show, setShow] = useState(false);
+  const publishedAt = dayjs(frontMatter.publishedAt).format(
+    'DD MMM YYYY'
+  );
   useEffect(() => {
     if (isVisible) {
       setShow(true);
@@ -14,19 +18,16 @@ export default function Preview({ blogPost }) {
   }, [isVisible]);
 
   return (
-    <div
-      ref={ref}
-      className={`${show ? styles.cardPreview : styles.pre}`}
-    >
+    <div ref={ref} className={`${show ? styles.card : styles.pre}`}>
       <div
         className={`${styles.cardInner} ${
           show ? styles.animation : null
         }`}
       >
-        <Link href={`/blog/${blogPost.slug}`}>
+        <Link href={`/blog/${frontMatter.slug}`} passHref>
           <div className={styles.imageWrapper}>
             <Image
-              src={blogPost.frontmatter.image}
+              src={frontMatter.image}
               fill
               sizes="(max-width: 1200px) 100vw"
               style={{ objectFit: 'cover' }}
@@ -36,18 +37,19 @@ export default function Preview({ blogPost }) {
         </Link>
 
         <div className={styles.tagsContainer}>
-          {blogPost.frontmatter.tags.map((t, i) => (
-            <span key={i}>{t.toUpperCase()}</span>
+          {frontMatter.tags.map((tag, i) => (
+            <span key={i}>{tag.toUpperCase()}</span>
           ))}
         </div>
         <div className={styles.blogContainer}>
-          <span>{blogPost.frontmatter.date}</span>
-          <h3>
-            <Link href={`/blog/${blogPost.slug}`}>
-              {blogPost.frontmatter.title}
-            </Link>
-          </h3>
-          <p>{blogPost.frontmatter.description}</p>
+          <span>
+            {publishedAt}
+            &mdash; {frontMatter.readingTime}
+          </span>
+          <Link href={`/blog/${frontMatter.slug}`} passHref>
+            <h3>{frontMatter.title}</h3>
+          </Link>
+          <p>{frontMatter.excerpt}</p>
         </div>
       </div>
     </div>
