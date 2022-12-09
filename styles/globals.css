@@ -106,7 +106,14 @@ blockquote {
 .inBlogImage {
   max-width: 900px;
   position: relative;
-  height: 350px;
+  height: 300px;
+  margin: 1rem 0;
+}
+
+.inBlogImageLarge {
+  max-width: 900px;
+  position: relative;
+  height: 400px;
   margin: 1rem 0;
 }
 

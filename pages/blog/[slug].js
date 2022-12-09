@@ -30,45 +30,47 @@ export default function PostPage({ post: { source, frontmatter } }) {
           content="width=device-width, initial-scale=1"
         />
       </Head>
-      <Navbar />
-      <section className={styles.section}>
-        <div className={styles.card}>
-          <div className={styles.tags}>
-            {frontmatter.tags.map((t, i) => (
-              <span key={i}>{t.toUpperCase()}</span>
-            ))}
-          </div>
-          <h1>{frontmatter.title}</h1>
-          <div className={styles.author}>
-            <div>
+      <main className={'main'}>
+        <Navbar />
+        <section className={styles.section}>
+          <div className={styles.card}>
+            <div className={styles.tags}>
+              {frontmatter.tags.map((t, i) => (
+                <span key={i}>{t.toUpperCase()}</span>
+              ))}
+            </div>
+            <h1>{frontmatter.title}</h1>
+            <div className={styles.author}>
+              <div>
+                <Image
+                  src={me}
+                  width={35}
+                  height={35}
+                  alt="Author Image"
+                />
+              </div>
+              <span>{frontmatter.author}</span>
+              <span>
+                {publishedAt}
+                &mdash; {frontmatter.readingTime}
+              </span>
+            </div>
+            <div className={styles.blogImage}>
               <Image
-                src={me}
-                width={35}
-                height={35}
-                alt="Author Image"
+                src={frontmatter.image}
+                fill
+                sizes="(max-width: 1200px) 100vw"
+                style={{ objectFit: 'cover' }}
+                alt="Blog Image"
               />
             </div>
-            <span>{frontmatter.author}</span>
-            <span>
-              {publishedAt}
-              &mdash; {frontmatter.readingTime}
-            </span>
           </div>
-          <div className={styles.blogImage}>
-            <Image
-              src={frontmatter.image}
-              fill
-              sizes="(max-width: 1200px) 100vw"
-              style={{ objectFit: 'cover' }}
-              alt="Blog Image"
-            />
-          </div>
-        </div>
 
-        <article>
-          <MDXRemote {...source} components={{ Image }} />
-        </article>
-      </section>
+          <article>
+            <MDXRemote {...source} components={{ Image }} />
+          </article>
+        </section>
+      </main>
     </div>
   );
 }
