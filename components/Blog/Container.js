@@ -6,11 +6,9 @@ import { useInView } from 'react-hook-inview';
 import dayjs from 'dayjs';
 
 export default function Container({ frontMatter }) {
-  console.log(frontMatter.publishedAt);
-  const publishedAt = dayjs(frontMatter.publishedAt)
-    .format('DD MMM YYYY')
-    .toUpperCase();
-  console.log(publishedAt);
+  const publishedAt = dayjs(frontMatter.publishedAt).format(
+    'DD MMM YYYY'
+  );
   const [ref, isVisible] = useInView();
   const [show, setShow] = useState(false);
   useEffect(() => {

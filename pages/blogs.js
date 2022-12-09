@@ -1,30 +1,30 @@
 import Head from 'next/head';
-import Link from 'next/link';
-import fs from 'fs';
-import matter from 'gray-matter';
+
 import styles from '../styles/Posts.module.css';
 import Navbar from '../components/Navbar/Navbar';
 import Preview from '../components/Blog/Preview';
 import Footer from '../components/Footer/Footer';
 import Contact from '../components/Contact/Contact';
+import { getAllArticles } from '../src/utils/mdx';
 
-export const getStaticProps = async () => {
-  const files = fs.readdirSync('posts');
-  const posts = files.map((fileName) => {
-    const slug = fileName.replace('.md', '');
-    const readFile = fs.readFileSync(`posts/${fileName}`, 'utf-8');
-    const { data: frontmatter } = matter(readFile);
-    return {
-      slug,
-      frontmatter,
-    };
-  });
+export async function getStaticProps() {
+  const articles = await getAllArticles();
+
+  articles
+    .map((article) => article.data)
+    .sort((a, b) => {
+      if (a.data.publishedAt > b.data.publishedAt) return 1;
+      if (a.data.publishedAt < b.data.publishedAt) return -1;
+
+      return 0;
+    });
+
   return {
     props: {
-      posts,
+      posts: articles.reverse(),
     },
   };
-};
+}
 
 export default function Blogs({ posts }) {
   return (
@@ -46,8 +46,8 @@ export default function Blogs({ posts }) {
             <span>01</span>ALL POSTS
           </h1>
           <div className={styles.postsWrapper}>
-            {posts.map((blogPost, i) => (
-              <Preview key={i} blogPost={blogPost} />
+            {posts.map((frontMatter, i) => (
+              <Preview key={i} frontMatter={frontMatter} />
             ))}
           </div>
         </section>
