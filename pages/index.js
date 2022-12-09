@@ -31,7 +31,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }) {
-  console.log(posts);
   return (
     <div className={'container'}>
       <Head>

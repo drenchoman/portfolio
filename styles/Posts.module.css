@@ -76,3 +76,10 @@
   height: 250px;
   overflow: hidden;
 }
+
+.inBlogImage {
+  max-width: 900px;
+  position: relative;
+  height: 350px;
+  margin: 1rem 0;
+}

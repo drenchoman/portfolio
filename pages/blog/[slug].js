@@ -12,6 +12,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeCodeTitles from 'rehype-code-titles';
 import dayjs from 'dayjs';
+import ImageBlog from '../../components/Blog/ImageBlog';
 
 export default function PostPage({ post: { source, frontmatter } }) {
   const publishedAt = dayjs(frontmatter.publishedAt).format(
@@ -19,7 +20,7 @@ export default function PostPage({ post: { source, frontmatter } }) {
   );
 
   return (
-    <div className={styles.container}>
+    <div className={'container'}>
       <Head>
         <title>Oscar Harron</title>
         <meta name="description" content="Its me" />
