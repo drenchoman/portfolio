@@ -10,15 +10,11 @@ import { getArticleFromSlug, getSlug } from '../../src/utils/mdx';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeCodeTitles from 'rehype-code-titles';
-import dayjs from 'dayjs';
 import ImageBlog from '../../components/Blog/ImageBlog';
 import AuthorCard from '../../components/Post/AuthorCard';
+import Links from '../../components/Post/Links';
 
 export default function PostPage({ post: { source, frontmatter } }) {
-  const publishedAt = dayjs(frontmatter.publishedAt).format(
-    'DD MMM YYYY'
-  );
-
   return (
     <div className={'container'}>
       <Head>
@@ -33,20 +29,31 @@ export default function PostPage({ post: { source, frontmatter } }) {
       <main className={'main'}>
         <Navbar />
         <section className={styles.section}>
-          <AuthorCard frontmatter={frontmatter} />
-          <div className={styles.blogImage}>
-            <Image
-              src={frontmatter.image}
-              fill
-              sizes="(max-width: 1200px) 100vw"
-              style={{ objectFit: 'cover' }}
-              alt="Blog Image"
-            />
-          </div>
+          <div className={styles.articleWrapper}>
+            <Links />
+            <AuthorCard frontmatter={frontmatter} />
+            <div className={styles.blogImage}>
+              <Image
+                src={frontmatter.image}
+                fill
+                sizes="(max-width: 1200px) 100vw"
+                style={{ objectFit: 'cover' }}
+                alt="Blog Image"
+              />
+            </div>
 
-          <article>
-            <MDXRemote {...source} components={{ Image }} />
-          </article>
+            <article>
+              <MDXRemote {...source} components={{ Image }} />
+            </article>
+          </div>
+          <div className={styles.relatedWrapper}>
+            <div className={styles.related}>
+              <h3>Related Posts</h3>
+              <div>
+                <span>Post</span>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </div>
