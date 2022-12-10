@@ -38,7 +38,7 @@ export default function Preview({ frontMatter }) {
 
         <div className={styles.tagsContainer}>
           {frontMatter.tags.map((tag, i) => (
-            <span key={i}>{tag.toUpperCase()}</span>
+            <span key={i}>{tag}</span>
           ))}
         </div>
         <div className={styles.blogContainer}>

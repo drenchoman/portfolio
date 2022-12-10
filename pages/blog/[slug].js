@@ -5,7 +5,6 @@ import rehypeSlug from 'rehype-slug';
 import styles from '../../styles/Posts.module.css';
 import Image from 'next/image';
 import 'highlight.js/styles/atom-one-dark-reasonable.css';
-import me from '../../public/me.jpeg';
 import Navbar from '../../components/Navbar/Navbar';
 import { getArticleFromSlug, getSlug } from '../../src/utils/mdx';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
@@ -13,6 +12,7 @@ import rehypeHighlight from 'rehype-highlight';
 import rehypeCodeTitles from 'rehype-code-titles';
 import dayjs from 'dayjs';
 import ImageBlog from '../../components/Blog/ImageBlog';
+import AuthorCard from '../../components/Post/AuthorCard';
 
 export default function PostPage({ post: { source, frontmatter } }) {
   const publishedAt = dayjs(frontmatter.publishedAt).format(
@@ -33,37 +33,15 @@ export default function PostPage({ post: { source, frontmatter } }) {
       <main className={'main'}>
         <Navbar />
         <section className={styles.section}>
-          <div className={styles.card}>
-            <div className={styles.tags}>
-              {frontmatter.tags.map((t, i) => (
-                <span key={i}>{t.toUpperCase()}</span>
-              ))}
-            </div>
-            <h1>{frontmatter.title}</h1>
-            <div className={styles.author}>
-              <div>
-                <Image
-                  src={me}
-                  width={35}
-                  height={35}
-                  alt="Author Image"
-                />
-              </div>
-              <span>{frontmatter.author}</span>
-              <span>
-                {publishedAt}
-                &mdash; {frontmatter.readingTime}
-              </span>
-            </div>
-            <div className={styles.blogImage}>
-              <Image
-                src={frontmatter.image}
-                fill
-                sizes="(max-width: 1200px) 100vw"
-                style={{ objectFit: 'cover' }}
-                alt="Blog Image"
-              />
-            </div>
+          <AuthorCard frontmatter={frontmatter} />
+          <div className={styles.blogImage}>
+            <Image
+              src={frontmatter.image}
+              fill
+              sizes="(max-width: 1200px) 100vw"
+              style={{ objectFit: 'cover' }}
+              alt="Blog Image"
+            />
           </div>
 
           <article>
