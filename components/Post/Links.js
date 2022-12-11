@@ -9,6 +9,8 @@ export default function Links() {
         <div key={i}>
           <span>{p}</span>
           <span>{i}</span>
+
+          <AiOutlineRight />
         </div>;
       })}
     </div>
