@@ -10,11 +10,18 @@ import { getArticleFromSlug, getSlug } from '../../src/utils/mdx';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeCodeTitles from 'rehype-code-titles';
-import ImageBlog from '../../components/Blog/ImageBlog';
+import { getAllArticles } from '../../src/utils/mdx';
 import AuthorCard from '../../components/Post/AuthorCard';
 import Links from '../../components/Post/Links';
+import Related from '../../components/Post/Related';
 
-export default function PostPage({ post: { source, frontmatter } }) {
+export default function PostPage({
+  post: { source, frontmatter, posts },
+}) {
+  const relatedPosts = posts.filter(
+    (post) => post.id !== frontmatter.id
+  );
+
   return (
     <div className={'container'}>
       <Head>
@@ -30,7 +37,7 @@ export default function PostPage({ post: { source, frontmatter } }) {
         <Navbar />
         <section className={styles.section}>
           <div className={styles.articleWrapper}>
-            <Links />
+            <Links title={frontmatter.title} />
             <AuthorCard frontmatter={frontmatter} />
             <div className={styles.blogImage}>
               <Image
@@ -46,14 +53,7 @@ export default function PostPage({ post: { source, frontmatter } }) {
               <MDXRemote {...source} components={{ Image }} />
             </article>
           </div>
-          <div className={styles.relatedWrapper}>
-            <div className={styles.related}>
-              <h3>Related Posts</h3>
-              <div>
-                <span>Post</span>
-              </div>
-            </div>
-          </div>
+          <Related relatedPosts={relatedPosts} />
         </section>
       </main>
     </div>
@@ -79,6 +79,17 @@ export async function getStaticProps({ params }) {
   const { slug } = params;
   const { content, frontmatter } = await getArticleFromSlug(slug);
 
+  const articles = await getAllArticles();
+
+  articles
+    .map((article) => article.data)
+    .sort((a, b) => {
+      if (a.data.publishedAt > b.data.publishedAt) return 1;
+      if (a.data.publishedAt < b.data.publishedAt) return -1;
+
+      return 0;
+    });
+
   const mdxSource = await serialize(content, {
     mdxOptions: {
       rehypePlugins: [
@@ -100,6 +111,7 @@ export async function getStaticProps({ params }) {
       post: {
         source: mdxSource,
         frontmatter,
+        posts: articles.reverse(),
       },
     },
   };

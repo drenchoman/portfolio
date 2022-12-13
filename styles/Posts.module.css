@@ -40,7 +40,7 @@
 .blogImage {
   max-width: 900px;
   position: relative;
-  height: 350px;
+  height: 500px;
   margin: 1rem 0;
 }
 
@@ -58,13 +58,16 @@
   margin: 1rem 0;
 }
 
-.relatedWrapper {
+.relatedInfo {
   display: flex;
-  flex-direction: column;
-  min-height: 100%;
+  flex-direction: ;
 }
 
-.related {
-  display: flex;
-  position: sticky;
+@media screen and (max-width: 420px) {
+  .section {
+    flex-direction: column;
+  }
+  .blogImage {
+    height: 250px;
+  }
 }

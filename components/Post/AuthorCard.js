@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 
 export default function AuthorCard({ frontmatter }) {
   const publishedAt = dayjs(frontmatter.publishedAt).format(
-    'DD MMM YYYY'
+    'DD MMM YYYY '
   );
   return (
     <div className={styles.card}>
@@ -21,10 +21,8 @@ export default function AuthorCard({ frontmatter }) {
           <Image src={me} width={35} height={35} alt="Author Image" />
         </div>
         <span>{frontmatter.author}</span>
-        <span>
-          {publishedAt}
-          &mdash; {frontmatter.readingTime}
-        </span>
+        <span>{publishedAt}</span>
+        <span>{frontmatter.readingTime}</span>
       </div>
     </div>
   );

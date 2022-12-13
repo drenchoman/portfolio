@@ -22,6 +22,17 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
+p,
+li {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+li {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
 section > h2 {
   font-size: 1.75rem;
 }
@@ -70,10 +81,21 @@ article {
   /* padding: 0 1rem; */
 }
 
+article > h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+article > h2 {
+  margin: 0 0 1rem 0;
+}
+
 blockquote {
-  font-size: 2rem;
   margin: 0 auto;
   display: inline-block;
+}
+blockquote > p {
+  font-size: 2rem;
 }
 
 /* .canvas{
@@ -94,6 +116,7 @@ blockquote {
 
 .container {
   padding: 0 2rem;
+  overflow: hidden;
 }
 
 .main {
@@ -120,5 +143,10 @@ blockquote {
 @media screen and (max-width: 420px) {
   .container {
     padding: 0 1rem;
+  }
+  p,
+  li,
+  span {
+    font-size: 1.1rem;
   }
 }
