@@ -30,7 +30,7 @@ export default function PostPage({ post: { source, frontmatter } }) {
         <Navbar />
         <section className={styles.section}>
           <div className={styles.articleWrapper}>
-            <Links />
+            <Links title={frontmatter.title} />
             <AuthorCard frontmatter={frontmatter} />
             <div className={styles.blogImage}>
               <Image
