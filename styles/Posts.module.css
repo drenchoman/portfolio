@@ -58,13 +58,13 @@
   margin: 1rem 0;
 }
 
-.relatedWrapper {
+.relatedInfo {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
 }
 
-.related {
-  display: flex;
-  position: sticky;
+@media screen and (max-width: 420px) {
+  .section {
+    flex-direction: column;
+  }
 }
