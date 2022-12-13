@@ -21,10 +21,8 @@ export default function AuthorCard({ frontmatter }) {
           <Image src={me} width={35} height={35} alt="Author Image" />
         </div>
         <span>{frontmatter.author}</span>
-        <span>
-          {publishedAt}
-          &mdash; {frontmatter.readingTime}
-        </span>
+        <span>{publishedAt}</span>
+        <span>{frontmatter.readingTime}</span>
       </div>
     </div>
   );

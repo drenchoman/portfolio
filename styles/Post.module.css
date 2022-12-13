@@ -16,7 +16,8 @@
 }
 
 .tags > span {
-  font-size: 0.8rem;
+  font-size: 1rem;
+  /* font-weight: 600; */
   padding: 0.5rem;
   margin: 0 0.5rem 0 0;
   background-color: aliceblue;
@@ -28,7 +29,17 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 16px;
+}
+
+.author > span {
+  font-weight: 300;
+  text-align: center;
+  margin: 0 8px;
+  font-size: 1rem;
+}
+
+.author > div {
+  margin: 0;
 }
 
 .author > div > img {
@@ -103,7 +114,19 @@
 }
 
 @media screen and (max-width: 420px) {
-  .linkWrapper:nth-child(2) > a {
-    font-size: 3rem;
+  .linkWrapper > :nth-child(2) > svg {
+    display: none;
+  }
+  .linkTitle {
+    display: none;
+  }
+  .relatedWrapper {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  .related {
+    position: relative;
   }
 }

@@ -20,7 +20,7 @@ export default function Links({ title }) {
           <AiOutlineRight />
         </div>
       ))}
-      <span>{title}</span>
+      <span className={styles.linkTitle}>{title}</span>
     </div>
   );
 }

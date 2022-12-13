@@ -86,6 +86,10 @@ article > h3 {
   font-weight: 600;
 }
 
+article > h2 {
+  margin: 0 0 1rem 0;
+}
+
 blockquote {
   margin: 0 auto;
   display: inline-block;
@@ -112,6 +116,7 @@ blockquote > p {
 
 .container {
   padding: 0 2rem;
+  overflow: hidden;
 }
 
 .main {
@@ -140,7 +145,8 @@ blockquote > p {
     padding: 0 1rem;
   }
   p,
-  li {
+  li,
+  span {
     font-size: 1.1rem;
   }
 }
