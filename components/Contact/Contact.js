@@ -47,7 +47,7 @@ export default function Contact({ num }) {
             className={`${show ? styles.fade : null}`}
             rel="noopener noreferrrer noreferrer"
             target="_blank"
-            href="https:www.github.com/drenchoman"
+            href="https://www.github.com/drenchoman"
           >
             <BsLinkedin size={size} />
           </a>
@@ -55,7 +55,7 @@ export default function Contact({ num }) {
             className={`${show ? styles.fade : null}`}
             rel="noopener noreferrrer noreferrer"
             target="_blank"
-            href="https:www.instagram.com/its_oggie"
+            href="https://www.instagram.com/its_oggie"
           >
             <BsInstagram size={size} />
           </a>
