@@ -35,7 +35,10 @@ export default function Home({ posts }) {
     <div className={'container'}>
       <Head>
         <title>Oscar Harron | Web Developer</title>
-        <meta name="description" content="Its me" />
+        <meta
+          name="Welcome to the Portfolio of Oscar Harron. Here you will find my latest work and blog posts about Web Development and life in general."
+          content="Its me"
+        />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -53,7 +56,7 @@ export default function Home({ posts }) {
           sizes="16x16"
           href="/favicon/favicon-16x16.png"
         />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1"

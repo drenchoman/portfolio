@@ -30,8 +30,11 @@ export default function Blogs({ posts }) {
   return (
     <div className={'container'}>
       <Head>
-        <title>Oscar Harron</title>
-        <meta name="description" content="Its me" />
+        <title>Oscar Harron | Blogs</title>
+        <meta
+          name="Here you will find my blog posts on Web Development and beyond."
+          content="Its me"
+        />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
