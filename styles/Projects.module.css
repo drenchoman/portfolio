@@ -328,6 +328,7 @@
   display: flex;
   gap: 1rem;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .builtWith {
