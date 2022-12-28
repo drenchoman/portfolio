@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Links({ title }) {
   const path = [
     { id: 1, name: 'Home', href: '/' },
-    { id: 2, name: 'Blog', href: '/blog' },
+    { id: 2, name: 'Blog', href: '/blogs' },
   ];
 
   return (

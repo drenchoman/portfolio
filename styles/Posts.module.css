@@ -66,8 +66,10 @@
 @media screen and (max-width: 420px) {
   .section {
     flex-direction: column;
+    width: 100%;
   }
   .blogImage {
     height: 250px;
+    width: 100%;
   }
 }
