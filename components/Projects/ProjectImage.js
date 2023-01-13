@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from '../../styles/Projects.module.css';
 import { useInView } from 'react-hook-inview';
 
-export default function ProjectImage({ img }) {
+export default function ProjectImage({ img, link }) {
   const [ref, isVisible] = useInView();
   const [show, setShow] = useState(false);
 
@@ -15,9 +15,10 @@ export default function ProjectImage({ img }) {
 
   return (
     <div ref={ref} className={styles.imgWrapper}>
+     
       <div
         className={`${show ? styles.imageWrapper : styles.hidden}`}
-      >
+      > <a href={link}> 
         <Image
           src={img}
           fill
@@ -25,7 +26,9 @@ export default function ProjectImage({ img }) {
           sizes="(max-width: 1500px) 100vw"
           alt="hello"
         />
+        </a>
       </div>
+
     </div>
   );
 }

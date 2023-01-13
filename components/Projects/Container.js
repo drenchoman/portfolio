@@ -13,8 +13,7 @@ export default function Container({proj}) {
     <div className={styles.container}>
       <ProjectCard  proj={proj} />
       <div className={styles.imageCard}>
-        <ProjectName name={proj.name}/>
-        <ProjectImage  img={proj.image} />
+        <ProjectImage  img={proj.image} link={proj.link} />
       </div>
 
     </div>
