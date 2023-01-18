@@ -9,6 +9,9 @@ export default function About() {
     </h2>
     <div className={styles.wrapper}>
       <h3>Hello world</h3>
+      <p>
+        I am a talented human being
+      </p>
     </div>
     </section>
   )
