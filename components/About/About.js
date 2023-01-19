@@ -12,6 +12,7 @@ export default function About() {
       <p>
         I am a talented human being
       </p>
+      <p>I will make a genuine commit tomorrow</p>
     </div>
     </section>
   )
