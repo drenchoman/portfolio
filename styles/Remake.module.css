@@ -1,0 +1,19 @@
+.main{
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "left right";
+  height: 100vh;
+}
+
+.left{
+  grid-area: left;
+  background-color: aquamarine;
+
+}
+
+.right{
+  grid-area: right;
+  background-color: aqua;
+}
+

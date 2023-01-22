@@ -1,4 +1,5 @@
 import Head from "next/head";
+import styles from '../styles/Remake.module.css'
 
 
 export default function Remake() {
@@ -38,8 +39,9 @@ export default function Remake() {
         />
       </Head>
 
-      <main className={'main'}>
-        <div>TESTING</div>
+      <main className={styles.main}>
+        <div className={styles.left}>TESTING</div>
+        <div className={styles.right}>LOL</div>
       </main>
     </div>
   );
