@@ -55,7 +55,16 @@ export default function Remake() {
             </ul>
           </div>
         </div>
-        <div className={styles.right}>LOL</div>
+        <div className={styles.right}>
+          <div className={styles.about}>
+            <p>
+            <span>Self-taught developer & designer.</span>
+            <span>Passionate about building </span>
+            <span>beautiful, accessible websites</span>
+            <span>that solve real world problems.</span>
+          </p>
+          </div>
+        </div>
       </main>
     </div>
   );
