@@ -6,7 +6,7 @@ export default function Remake() {
   return (
     <div className={'container'}>
       <Head>
-        <title>Oscar Harron | Blogs</title>
+        <title>Oscar Harron | Remake</title>
         <meta
           name="Here you will find my blog posts on Web Development and beyond."
           content="Its me"
@@ -40,7 +40,21 @@ export default function Remake() {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.left}>TESTING</div>
+
+        <div className={styles.left}>
+          <div>
+          <h1>Oscar Harron</h1>
+          <h2>Full Stack Developer</h2>
+          </div>
+          <div>
+            <ul>
+              <li>Home</li>
+              <li>Projects</li>
+              <li>Blog</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+        </div>
         <div className={styles.right}>LOL</div>
       </main>
     </div>
