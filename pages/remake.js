@@ -1,11 +1,12 @@
 import Head from "next/head";
+import styles from '../styles/Remake.module.css'
 
 
 export default function Remake() {
   return (
     <div className={'container'}>
       <Head>
-        <title>Oscar Harron | Blogs</title>
+        <title>Oscar Harron | Remake</title>
         <meta
           name="Here you will find my blog posts on Web Development and beyond."
           content="Its me"
@@ -38,8 +39,32 @@ export default function Remake() {
         />
       </Head>
 
-      <main className={'main'}>
-        <div>TESTING</div>
+      <main className={styles.main}>
+
+        <div className={styles.left}>
+          <div className={styles.intro}>
+          <h1 className={styles.header}>Oscar Harron</h1>
+          <p className={styles.subHeader}>Full Stack Developer</p>
+          </div>
+          <div>
+            <ul>
+              <li>Home</li>
+              <li>Projects</li>
+              <li>Blog</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+        </div>
+        <div className={styles.right}>
+          <div className={styles.about}>
+            <p>
+            <span>Self-taught developer & designer.</span>
+            <span>Passionate about building </span>
+            <span>beautiful, accessible websites</span>
+            <span>that solve real world problems.</span>
+          </p>
+          </div>
+        </div>
       </main>
     </div>
   );

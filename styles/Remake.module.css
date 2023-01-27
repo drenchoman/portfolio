@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;700&display=swap');.main{
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "left right";
+  height: calc(100vh - 3rem);
+  border: 1px solid var(--foreground);
+  margin: 1.5rem ;
+
+  background: linear-gradient(
+    to bottom right,
+    var(--c1),
+    var(--c2),
+    var(--c3),
+    var(--c1)
+  ), url(../public/nnnoise.svg);
+  filter: contrast(140%) brightness(130%); 
+  /* background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  white-space: nowrap;
+  background-size: 200%;
+  background-position: cover;
+  animation: background-pan 18s linear infinite;
+
+  font-family: 'Cormorant SC', serif;
+
+}
+
+.left{
+  grid-area: left;
+
+}
+
+.intro{
+  margin: 1rem;
+}
+
+.header{
+  font-size: 3rem;
+  letter-spacing: 0.05rem;
+  font-weight: 300;
+  margin: 0;
+}
+.subHeader{
+  font-size: 1rem;
+  margin: 0;
+}
+
+.right{
+  grid-area: right;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.about > p {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@keyframes background-pan { 
+  0%{
+    background-position: -100% center;
+  }
+  50%{
+    background-position: -200% center;
+  }
+  100%{
+    background-position: -100% center;
+  }
+ 
+  
+}
+
+
+@media screen and (max-width: 768px){
+  .header{
+    font-size: 1.5rem;
+  }
+}

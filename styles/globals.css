@@ -3,13 +3,35 @@
 :root {
   --card-color: #3c4043;
   --background-color: #202124;
-  --c1: #009eff;
-  --c2: #00e7ff;
-  --c3: #00fff6;
-  --c4: #0014ff;
-  --c5: #7743db;
+  --c1: #202020;
+  --c2: #404040;
+  --c3: 	#484848;
+  --c4: #404040;
+  --c5: #505050;
   --animation-delay: 0.7s;
+  --background: #fff;
+  --foreground: #000;
 }
+* {
+  box-sizing: border-box;
+}
+
+[data-theme='dark'] {
+  --background: #000;
+  --foreground: #fff;
+
+  --c1: #202020;
+  --c2: #404040;
+  --c3: 	#484848;
+
+}
+[data-theme='light'] {
+    --c1: #F8F8F8;
+  --c2: #E8E8E8;
+  --c3: #DCDCDC; 
+}
+
+
 
 html,
 body {
@@ -22,6 +44,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
+
 p,
 li {
   font-size: 1.2rem;
@@ -46,9 +69,6 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
 
 canvas {
   position: fixed;
@@ -114,10 +134,10 @@ blockquote > p {
   }
 } */
 
-.container {
-  padding: 0 2rem;
+/* .container {
+  padding: 1rem;
   overflow: hidden;
-}
+} */
 
 .main {
   padding: 1rem 0;
@@ -140,13 +160,13 @@ blockquote > p {
   margin: 1rem 0;
 }
 
+
 @media screen and (max-width: 420px) {
-  .container {
-    padding: 0 1rem;
-  }
+
   p,
   li,
   span {
     font-size: 1.1rem;
   }
 }
+
