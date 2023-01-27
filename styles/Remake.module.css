@@ -1,4 +1,4 @@
-.main{
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;700&display=swap');.main{
   display: grid;
   grid-template-columns: 20% 1fr;
   grid-template-rows: 1fr;
@@ -6,6 +6,7 @@
   height: calc(100vh - 3rem);
   border: 1px solid var(--foreground);
   margin: 1.5rem ;
+
   background: linear-gradient(
     to bottom right,
     var(--c1),
@@ -19,12 +20,31 @@
   -webkit-text-fill-color: transparent; */
   white-space: nowrap;
   background-size: 200%;
-  animation: background-pan 30s linear infinite;
+  background-position: cover;
+  animation: background-pan 18s linear infinite;
+
+  font-family: 'Cormorant SC', serif;
+
 }
 
 .left{
   grid-area: left;
 
+}
+
+.intro{
+  margin: 1rem;
+}
+
+.header{
+  font-size: 3rem;
+  letter-spacing: 0.05rem;
+  font-weight: 300;
+  margin: 0;
+}
+.subHeader{
+  font-size: 1rem;
+  margin: 0;
 }
 
 .right{
@@ -47,6 +67,7 @@
   flex-direction: column;
 }
 
+
 @keyframes background-pan { 
   0%{
     background-position: -100% center;
@@ -59,4 +80,11 @@
   }
  
   
+}
+
+
+@media screen and (max-width: 768px){
+  .header{
+    font-size: 1.5rem;
+  }
 }

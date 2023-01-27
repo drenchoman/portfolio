@@ -42,9 +42,9 @@ export default function Remake() {
       <main className={styles.main}>
 
         <div className={styles.left}>
-          <div>
-          <h1>Oscar Harron</h1>
-          <h2>Full Stack Developer</h2>
+          <div className={styles.intro}>
+          <h1 className={styles.header}>Oscar Harron</h1>
+          <p className={styles.subHeader}>Full Stack Developer</p>
           </div>
           <div>
             <ul>
