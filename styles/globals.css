@@ -26,9 +26,10 @@
 
 }
 [data-theme='light'] {
-    --c1: #F8F8F8;
-  --c2: #E8E8E8;
-  --c3: #DCDCDC; 
+  --background: #fff;
+  --c1: 	#484848;
+  --c2:#A0A0A0;
+  --c3: 		#B0B0B0;
 }
 
 

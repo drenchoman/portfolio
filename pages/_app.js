@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   <>
   <ThemeProvider
   defaultTheme='system'
-  themes={['light', 'dark']}
+  themes={['light','dark']}
   enableSystem={true}
   attribute="data-theme"
   >

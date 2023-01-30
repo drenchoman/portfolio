@@ -1,8 +1,9 @@
 import Head from "next/head";
 import styles from '../styles/Remake.module.css'
-
+import Theme from "../components/Theme/Theme";
 
 export default function Remake() {
+  
   return (
     <div className={'container'}>
       <Head>
@@ -54,6 +55,8 @@ export default function Remake() {
               <li>Contact</li>
             </ul>
           </div>
+          <Theme />
+
         </div>
         <div className={styles.right}>
           <div className={styles.about}>
