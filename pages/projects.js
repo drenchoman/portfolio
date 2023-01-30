@@ -1,11 +1,10 @@
 import Head from "next/head";
 import styles from '../styles/Remake.module.css'
 import Theme from "../components/Theme/Theme";
-import About from '../components/RHome/About'
+import Projects from '../components/RProjects/Projects'
 import Intro from '../components/RHome/Intro'
 
 export default function Remake() {
-
   
   return (
     <div className={'container'}>
@@ -45,8 +44,9 @@ export default function Remake() {
       <Theme />
 
       <main className={styles.main}>
+
       <Intro />
-      <About />
+      {/* <Projects /> */}
       </main>
     </div>
   );

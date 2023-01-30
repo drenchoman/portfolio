@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { useTheme } from 'next-themes'
+import styles from '../../styles/Theme.module.css'
 
 export default function Theme() {
   const {theme, systemTheme, setTheme} = useTheme()
@@ -20,15 +21,18 @@ export default function Theme() {
   return (
     
 
-    <div>
-      <div>
-        <div>
-
+    <div className={styles.theme}>
+      <div className={`${styles.lightContainer} ${styles.container}`} onClick={setLight}>
+        <div className={ theme == 'light' ? styles.selected : styles.box}>
         </div>
         <span>Light</span>
+      </div>
+      <div className={`${styles.lightContainer} ${styles.container}`} onClick={setDark}>
+        <div className={ theme == 'dark' ? styles.selected : styles.box}>
         </div>
-    <button onClick={setLight}>Light Mode</button>
-    <button onClick={setDark}>Dark mode</button>
+        <span>Dark</span>
+      </div>
+ 
     </div>
   )
 }
