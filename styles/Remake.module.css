@@ -7,21 +7,22 @@
   border: 1px solid var(--foreground);
   margin: 1.5rem ;
 
-  background: linear-gradient(
+  background-image: url(../public/nnnoise.svg),
+   linear-gradient(
     to bottom right,
     var(--c1),
     var(--c2),
     var(--c3),
     var(--c1)
-  ), url(../public/nnnoise.svg);
+  );
   filter: contrast(140%) brightness(130%); 
   /* background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
   white-space: nowrap;
+  /* background-position: cover; */
   background-size: 200%;
-  background-position: cover;
-  animation: background-pan 18s linear infinite;
+  animation: background-pan 50s linear infinite;
 
   font-family: 'Cormorant SC', serif;
 
