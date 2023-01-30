@@ -7,7 +7,7 @@ import Intro from '../components/RHome/Intro'
 export default function Remake() {
   
   return (
-    <div className={'container'}>
+    <>
       <Head>
         <title>Oscar Harron | Remake</title>
         <meta
@@ -41,13 +41,7 @@ export default function Remake() {
           content="width=device-width, initial-scale=1"
         />
       </Head>
-      <Theme />
-
-      <main className={styles.main}>
-
-      <Intro />
-      {/* <Projects /> */}
-      </main>
-    </div>
+      <Projects /> 
+</>
   );
 }

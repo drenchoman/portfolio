@@ -3,6 +3,7 @@ import {Analytics} from '@vercel/analytics/react'
 import { ThemeProvider } from 'next-themes';
 import { useState } from 'react';
 import AppContext from '../components/AppContext';
+import Layout from '../components/Layout/layout';
 function MyApp({ Component, pageProps }) {
   const [session, setSession] = useState('Home')
   return (
@@ -14,8 +15,10 @@ function MyApp({ Component, pageProps }) {
     attribute="data-theme"
   >
     <AppContext.Provider value={{session, setSession}}>
-      <Component {...pageProps} />
-      <Analytics />
+      <Layout>
+        <Component {...pageProps} />
+        <Analytics />
+      </Layout>
     </AppContext.Provider>
     </ThemeProvider>
   </>
