@@ -61,7 +61,7 @@ export default function Remake() {
             <span>Self-taught developer & designer.</span>
             <span>Passionate about building </span>
             <span>beautiful, accessible websites</span>
-            <span>that solve real world problems.</span>
+            <span>that solve real world problems</span>
           </p>
           </div>
         </div>
