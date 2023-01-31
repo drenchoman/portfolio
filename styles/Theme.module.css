@@ -1,8 +1,8 @@
 
 .theme {
   position: absolute;
-  bottom: 4.25rem;
-  left: -3rem;
+  bottom: 4.5rem;
+  left: -3.25rem;
   display: flex;
   transform: rotate(-90deg);
 }
@@ -37,8 +37,8 @@
 
 @media screen and (max-width: 425px) {
   .theme{
-    left: -3.3rem;
-    bottom: 4.5rem;
+    left: -3.5rem;
+    bottom: 4.6rem;
   }
   
 }

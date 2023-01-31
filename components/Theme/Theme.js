@@ -8,12 +8,10 @@ export default function Theme() {
 
   const setDark = () => {
     setTheme('dark')
-    console.log(theme)
   }
 
   const setLight = () => {
     setTheme('light')
-    console.log(theme)
   }
 
   useEffect(() => setMounted(true),[])

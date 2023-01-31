@@ -41,16 +41,15 @@ export default function Intro() {
     <div className={styles.intro}>
     <h1 className={styles.header}>Oscar Harron</h1>
     <p className={styles.subHeader}>Full Stack Developer</p>
-    <p>{context.session}</p>
-    </div>
+    
     <div>
-      <ul>
+      <ul className={styles.options}>
         {navOptions.map((o) => (
-          <li onClick={() => updateNav(o.name)} key={o.id}>{o.name}</li>
+          <li onClick={() => updateNav(o.name)} key={o.id}>{context.session.toLowerCase() == o.name.toLowerCase() ? '●' : o.name}</li>
         ))}
       </ul>
     </div>
-
+    </div>
   </div>
   )
 }
