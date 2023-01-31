@@ -1,0 +1,101 @@
+.right{
+  grid-area: right;
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.project{
+
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: fade 1.5s ease-in-out forwards;
+}
+
+@keyframes fade {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+  
+}
+.container{
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 1rem;
+}
+
+.header{
+  font-size: 3.5rem;
+  font-weight: 200;
+  margin: 0;
+}
+
+.header:hover{
+  text-decoration: underline;
+}
+
+.info{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 0.8rem;
+  margin: 1rem;
+}
+
+.info > span {
+  margin: 0 0.25rem;
+  font-size: 0.8rem;
+}
+
+.divider{
+  margin: 0 0.25rem;
+}
+
+.github{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.githubContainer{
+  display: flex;
+  margin: 0 0.25rem;
+}
+
+.image{
+  filter: var(--filter);
+}
+
+@media screen and (max-width: 420px) {
+  .container{
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1rem 0.5rem;
+
+  }
+  
+  .header{
+    font-size: 1.8rem;
+  }
+  .info{
+    margin: 0;
+    align-items: center;
+  }
+  .info > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .project{
+  }
+  
+}

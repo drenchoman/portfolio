@@ -1,0 +1,44 @@
+
+.theme {
+  position: absolute;
+  bottom: 4.5rem;
+  left: -3.25rem;
+  display: flex;
+  transform: rotate(-90deg);
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container:hover{
+  cursor: pointer;
+}
+
+.container > * {
+  margin: 0 0.25rem;
+}
+
+.box {
+  width: 10px;
+  height: 10px;
+  background-color: var(--background);
+  border: 1px solid var(--foreground);
+}
+
+.selected {
+  width: 10px;
+  height: 10px;
+  background-color: var(--foreground);
+
+}
+
+@media screen and (max-width: 425px) {
+  .theme{
+    left: -3.5rem;
+    bottom: 4.6rem;
+  }
+  
+}
