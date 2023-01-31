@@ -10,14 +10,14 @@
   /* margin: 1.5rem ; */
   width: 100%;
 
-  background-image: url(../public/nnnoise.svg),
+  /* background-image: url('../public/nnnoise.svg'),
    linear-gradient(
     to bottom right,
     var(--c1),
     var(--c2),
     var(--c3),
     var(--c1)
-  );
+  ); */
   filter: contrast(140%) brightness(90%); 
   /* background-clip: text;
   -webkit-background-clip: text;
@@ -25,9 +25,40 @@
   white-space: nowrap;
   /* background-position: cover; */
   background-size: 200%;
-  animation: background-pan 50s linear infinite;
+  /* animation: background-pan 50s linear infinite; */
+  overflow: hidden;
 
 
+}
+
+@keyframes changeBgGradient {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  50% {
+    transform: translate(-65%, -70%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+.bg{
+ 
+    position: absolute;
+    z-index: 0;
+    background-image: url('../public/nnnoise.svg'),
+   linear-gradient(
+    to bottom right,
+    var(--c1),
+    var(--c2),
+    var(--c3),
+    var(--c1)
+  );
+    width: 300%;
+    height: 400%;
+    animation: changeBgGradient 30s cubic-bezier(0.42, 0, 0.58, 1) 1s infinite;
+  
 }
 
 .left{
