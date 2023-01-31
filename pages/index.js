@@ -10,7 +10,7 @@ export default function Remake() {
   return (
     <>
       <Head>
-        <title>Oscar Harron | Remake</title>
+        <title>Oscar Harron | Full Stack Developer</title>
         <meta
           name="Here you will find my blog posts on Web Development and beyond."
           content="Its me"
