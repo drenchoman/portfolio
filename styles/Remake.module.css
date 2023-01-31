@@ -40,6 +40,8 @@
 
 .intro{
   margin: 1rem;
+  animation: fade 1.5s ease-in-out forwards;
+
 }
 
 .header{
@@ -70,7 +72,18 @@
   flex-direction: column;
   padding-bottom: 1rem;
   padding-right: 1rem;
-  /* flex-wrap: wrap; */
+  opacity: 0;
+  animation: fade 1.5s ease-in-out forwards;
+}
+
+@keyframes fade {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+  
 }
 
 .about > p {
@@ -92,6 +105,10 @@
   font-size: 0.8rem;
 }
 
+.options > li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 
 
 

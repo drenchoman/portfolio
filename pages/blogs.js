@@ -26,6 +26,9 @@ export async function getStaticProps() {
   };
 }
 
+
+
+
 export default function Blogs({ posts }) {
   return (
     <div className={'container'}>

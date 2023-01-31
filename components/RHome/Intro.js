@@ -10,7 +10,7 @@ export default function Intro() {
   const updateNav = (value) => {
     context.setSession(value)
     if(value.toLowerCase() == 'home'){
-      router.push('/remake')
+      router.push('/')
     } else {
     router.push(`/${value.toLowerCase()}`)
   }
@@ -26,14 +26,14 @@ export default function Intro() {
     id: 2,
     name: 'Projects',
     },
-    {
-    id: 3,
-    name:'Blog'
-    },
-    {
-    id: 4,
-  name:'Contact'
-  }
+  //   {
+  //   id: 3,
+  //   name:'Blog'
+  //   },
+  //   {
+  //   id: 4,
+  // name:'Contact'
+  // }
 ]
 
   return (
