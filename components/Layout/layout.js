@@ -2,8 +2,12 @@ import React from 'react'
 import styles from '../../styles/Remake.module.css'
 import Intro from '../RHome/Intro'
 import Theme from '../Theme/Theme'
+import Three from '../Three/Three'
 export default function layout({children}) {
   return (
+    <>
+        <Three />
+
     <div className='container'>
     <Theme />
     <main className={styles.main}>
@@ -12,5 +16,6 @@ export default function layout({children}) {
     {children}
     </main>
     </div>
+    </>
   )
 }
