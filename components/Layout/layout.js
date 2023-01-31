@@ -7,6 +7,7 @@ export default function layout({children}) {
     <div className='container'>
     <Theme />
     <main className={styles.main}>
+      <div className={styles.bg}></div>
     <Intro />
     {children}
     </main>
