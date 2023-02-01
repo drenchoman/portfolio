@@ -1,0 +1,105 @@
+.right{
+  grid-area: right;
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.articles{
+  display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: fade 2s ease-in-out forwards;
+}
+
+.container{
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 1rem;
+  word-break: break-word; /* Chrome, Safari */
+  overflow-wrap: anywhere;
+}
+
+.header{
+  font-size: 3rem;
+  font-weight: 200;
+  margin: 0;
+  min-width: 15ch;
+word-break: break-all;
+
+
+}
+
+.header:hover{
+  text-decoration: underline;
+}
+
+@keyframes fade {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+  
+}
+
+.info{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 0.8rem;
+    margin: 1rem;
+  
+}
+
+.info_top > span {
+  margin: 0 0.25rem;
+  font-size: 0.8rem;
+}
+
+.info_bot > span {
+  margin: 0 0.25rem;
+  font-size: 0.8rem;
+  font-style: italic;
+
+}
+
+
+@media screen and (max-width: 420px) {
+  .container{
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1rem 0.5rem;
+
+  }
+  
+  .header{
+    font-size: 1.8rem;
+  }
+  .info{
+    margin: 0;
+    /* align-items: center; */
+  }
+  .info > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .project{
+  }
+  
+}
+
+@media screen and (max-width: 375px) {
+  .header{
+    font-size: 1rem;
+  }
+
+}

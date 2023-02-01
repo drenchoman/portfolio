@@ -26,10 +26,10 @@ export default function Intro() {
     id: 2,
     name: 'Projects',
     },
-  //   {
-  //   id: 3,
-  //   name:'Blog'
-  //   },
+    {
+    id: 3,
+    name:'Articles'
+    }
   //   {
   //   id: 4,
   // name:'Contact'

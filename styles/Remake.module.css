@@ -177,4 +177,11 @@
   .header{
     font-size: 1.75rem;
   }
+
+  .main{
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 1fr;
+    grid-template-areas: "left" 
+                        "right";
+  }
 }

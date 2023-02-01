@@ -4,7 +4,8 @@ import * as THREE from 'three';
 import vertexShader from '../../src/utils/vertexShader.glsl'
 import fragmentShader from '../../src/utils/fragmentShader.glsl'
 import { useTheme } from 'next-themes';
-import glslify from "glslify"
+import { OrbitControls} from 'three/examples/jsm/controls/OrbitControls'
+import { render } from 'react-dom';
 
 export default function Three() {
   const {theme} = useTheme()
@@ -32,7 +33,9 @@ export default function Three() {
       renderer.setSize(window.innerWidth, window.innerHeight);
     };
 
- 
+    const controls = new OrbitControls(camera, renderer.domElement)
+    controls.update()
+    
   
       const setSphere = (positionX, positionY, size, intensity) => {
         const geometry = new THREE.SphereGeometry(size, 32, 32)
@@ -60,7 +63,7 @@ export default function Three() {
       mesh.position.y = positionY
       return mesh
     }
-    const s1 = setSphere(0, 0, 1, 0.7)
+    const s1 = setSphere(0, 0, 1, 0.6)
     const s2 = setSphere(2, 1, 0.5, 0.9)
     const s3 = setSphere(-2, 0.3, 0.3, 0.3)
     scene.add(s1)
@@ -96,6 +99,7 @@ export default function Three() {
     const animate = () => {
      
       requestAnimationFrame(animate);
+      controls.update()
       const time = clock.getElapsedTime()
       camera.position.y += Math.cos(time) * 0.0003
     
