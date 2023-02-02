@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { useTheme } from 'next-themes'
-import styles from '../../styles/Theme.module.css'
+import styles from '../../styles/RTheme.module.css'
 
 export default function Theme() {
   const {theme, systemTheme, setTheme} = useTheme()

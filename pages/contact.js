@@ -1,11 +1,11 @@
 import Head from "next/head";
-import Projects from '../components/RProjects/Projects'
+import Contact from "../components/RContact/Contact";
 import { useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 import AppContext from "../components/AppContext";
 
-export default function Project() {
-  
+export default function RContact() {
+
   const router = useRouter()
   const context = useContext(AppContext)
   const path = router.pathname.substring(1)
@@ -27,11 +27,11 @@ export default function Project() {
   useEffect(() => {
     updateNav(path)
   },[])
-
+  
   return (
     <>
       <Head>
-        <title>Oscar Harron | Projects</title>
+        <title>Oscar Harron | Full Stack Developer</title>
         <meta
           name="Here you will find my blog posts on Web Development and beyond."
           content="Its me"
@@ -63,7 +63,9 @@ export default function Project() {
           content="width=device-width, initial-scale=1"
         />
       </Head>
-      <Projects /> 
-</>
+
+    
+      <Contact/>
+     </>
   );
 }

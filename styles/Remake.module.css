@@ -19,7 +19,7 @@
     var(--c3),
     var(--c1)
   ); */
-  filter: contrast(140%) brightness(90%); 
+  /* filter: contrast(140%) brightness(90%);  */
   /* background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
@@ -105,7 +105,7 @@
   padding-bottom: 1rem;
   padding-right: 1rem;
   opacity: 0;
-  animation: fade 1.5s ease-in-out forwards;
+  animation: fade 2s ease-in-out forwards;
 }
 
 @keyframes fade {
@@ -135,6 +135,7 @@
 .options > li {
   list-style-type: none;
   font-size: 0.8rem;
+  margin: 0.5rem 0
 }
 
 .options > li:hover {
@@ -176,5 +177,12 @@
 @media screen and (max-width: 768px){
   .header{
     font-size: 1.75rem;
+  }
+
+  .main{
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 1fr;
+    grid-template-areas: "left" 
+                        "right";
   }
 }

@@ -1,10 +1,8 @@
-import Head from 'next/head';
-
-import styles from '../styles/Posts.module.css';
-import Navbar from '../components/Navbar/Navbar';
-import Preview from '../components/Blog/Preview';
-import Footer from '../components/Footer/Footer';
-import Contact from '../components/Contact/Contact';
+import Head from "next/head";
+import Articles from "../components/RArticle/Articles";
+import { useEffect, useContext } from "react";
+import { useRouter } from "next/router";
+import AppContext from "../components/AppContext";
 import { getAllArticles } from '../src/utils/mdx';
 
 export async function getStaticProps() {
@@ -28,12 +26,34 @@ export async function getStaticProps() {
 
 
 
+export default function Project({posts}) {
+  
+  const router = useRouter()
+  const context = useContext(AppContext)
+  const path = router.pathname.substring(1)
 
-export default function Blogs({ posts }) {
+  const capitaliseFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1)
+   
+  }
+
+  const updateNav = (value) => {
+    if(value.toLowerCase() !== context.session.toLowerCase()){
+      let update = capitaliseFirstLetter(value)
+      context.setSession(update)
+    }
+    return
+
+  }
+
+  useEffect(() => {
+    updateNav(path)
+  },[])
+
   return (
-    <div className={'container'}>
+    <>
       <Head>
-        <title>Oscar Harron | Blogs</title>
+        <title>Oscar Harron | Articles</title>
         <meta
           name="Here you will find my blog posts on Web Development and beyond."
           content="Its me"
@@ -65,22 +85,7 @@ export default function Blogs({ posts }) {
           content="width=device-width, initial-scale=1"
         />
       </Head>
-
-      <main className={'main'}>
-        <Navbar />
-        <section className={styles.sectionAll}>
-          <h1>
-            <span>01</span>ALL POSTS
-          </h1>
-          <div className={styles.postsWrapper}>
-            {posts.map((frontMatter, i) => (
-              <Preview key={i} frontMatter={frontMatter} />
-            ))}
-          </div>
-        </section>
-        <Contact num={'02'} />
-        <Footer />
-      </main>
-    </div>
+      <Articles posts={posts} />
+</>
   );
 }

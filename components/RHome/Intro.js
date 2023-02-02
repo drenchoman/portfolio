@@ -26,14 +26,14 @@ export default function Intro() {
     id: 2,
     name: 'Projects',
     },
-  //   {
-  //   id: 3,
-  //   name:'Blog'
-  //   },
-  //   {
-  //   id: 4,
-  // name:'Contact'
-  // }
+    {
+    id: 3,
+    name:'Info'
+    },
+    {
+    id: 4,
+  name:'Contact'
+  }
 ]
 
   return (
@@ -42,13 +42,13 @@ export default function Intro() {
     <h1 className={styles.header}>Oscar Harron</h1>
     <p className={styles.subHeader}>Full Stack Developer</p>
     
-    <div>
+    <nav>
       <ul className={styles.options}>
         {navOptions.map((o) => (
           <li onClick={() => updateNav(o.name)} key={o.id}>{context.session.toLowerCase() == o.name.toLowerCase() ? '●' : o.name}</li>
         ))}
       </ul>
-    </div>
+    </nav>
     </div>
   </div>
   )

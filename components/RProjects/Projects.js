@@ -43,8 +43,8 @@ export default function Projects() {
   return (
     <div className={styles.right}>
      <div className={styles.project}>
-       {proj.map((p) => 
-       <div className={styles.container} key={p.id}>
+       {proj.map((p, i) => 
+       <div style={{animationDelay: `${i * 100}ms`}}   className={styles.container} key={p.id}>
         <Link href={p.link}>
           <h2 className={styles.header}>{p.name}</h2>
         </Link>

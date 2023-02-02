@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Projects from '../components/RProjects/Projects'
+import Info from "../components/RInfo/Info";
 import { useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 import AppContext from "../components/AppContext";
@@ -31,7 +31,7 @@ export default function Project() {
   return (
     <>
       <Head>
-        <title>Oscar Harron | Projects</title>
+        <title>Oscar Harron | Info</title>
         <meta
           name="Here you will find my blog posts on Web Development and beyond."
           content="Its me"
@@ -63,7 +63,7 @@ export default function Project() {
           content="width=device-width, initial-scale=1"
         />
       </Head>
-      <Projects /> 
+      <Info/> 
 </>
   );
 }
