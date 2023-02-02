@@ -55,8 +55,8 @@ export default function Project({posts}) {
       <Head>
         <title>Oscar Harron | Articles</title>
         <meta
-          name="Here you will find my blog posts on Web Development and beyond."
-          content="Its me"
+          name="description"
+          content="Based in AKL, NZ. Passionate about building beautiful accessible websites that solve real world problems."
         />
         <link
           rel="apple-touch-icon"
@@ -80,10 +80,23 @@ export default function Project({posts}) {
           name="viewport"
           content="width=device-width, initial-scale=1"
         />
+
         <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1"
+          property="og:title"
+          content="Oscar Harron"
         />
+        <meta
+          property="og:description"
+          content="Connecting you to small independent Vintage, Opshop and Recycled Clothing stores in NZ.
+          Discover your new favourite store here!"
+        />
+        <meta property="og:url" content="https://www.vintageclothing.co.nz" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dbyprqeyc/image/upload/v1675313489/pic_cpdbmi.jpg"
+        />
+
+
       </Head>
       <Articles posts={posts} />
 </>

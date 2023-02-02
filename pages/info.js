@@ -33,8 +33,8 @@ export default function Project() {
       <Head>
         <title>Oscar Harron | Info</title>
         <meta
-          name="Here you will find my blog posts on Web Development and beyond."
-          content="Its me"
+          name="description"
+          content="Based in AKL, NZ. Passionate about building beautiful accessible websites that solve real world problems."
         />
         <link
           rel="apple-touch-icon"
@@ -58,10 +58,54 @@ export default function Project() {
           name="viewport"
           content="width=device-width, initial-scale=1"
         />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1"
+            <meta
+          property="og:title"
+          content="Oscar Harron | Full Stack Developer"
         />
+        <meta
+          property="og:description"
+          content="Based in AKL, NZ. Passionate about building beautiful accessible websites that solve real world problems."
+        />
+        <meta property="og:url" content="https://www.oscarharron.com" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dbyprqeyc/image/upload/v1675313489/pic_cpdbmi.jpg"
+        />
+
+            {/* Linkedin */}
+            <meta
+          itemProp="name"
+          content="Oscar Harron | Full Stack Developer"
+        />
+        <meta
+          itemProp="description"
+          content="Based in AKL, NZ. Passionate about building beautiful accessible websites that solve real world problems."
+        />
+        <meta
+          itemProp="image"
+          content="https://res.cloudinary.com/dbyprqeyc/image/upload/v1675313489/pic_cpdbmi.jpg"
+        />
+        {/* Twiiter */}
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          name="twitter:title"
+          content="Oscar Harron | Full Stack Developer"
+        />
+
+        <meta name="twitter:url" content="https://oscarharron.com" />
+
+        <meta
+          name="twitter:description"
+          content="Based in AKL, NZ. Passionate about building beautiful accessible websites that solve real world problems."
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/dbyprqeyc/image/upload/v1675313489/pic_cpdbmi.jpg"
+        />
+
+
       </Head>
       <Info/> 
 </>
