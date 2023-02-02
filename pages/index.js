@@ -12,8 +12,8 @@ export default function Remake() {
       <Head>
         <title>Oscar Harron | Full Stack Developer</title>
         <meta
-          name="Here you will find my blog posts on Web Development and beyond."
-          content="Its me"
+          name="description"
+          content="Based in AKL, NZ. Passionate about building beautiful accessible websites that solve real world problems."
         />
         <link
           rel="apple-touch-icon"

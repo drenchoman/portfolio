@@ -56,7 +56,7 @@ export default function Project({posts}) {
         <title>Oscar Harron | Articles</title>
         <meta
           name="description"
-          content="Its me"
+          content="Based in AKL, NZ. Passionate about building beautiful accessible websites that solve real world problems."
         />
         <link
           rel="apple-touch-icon"
@@ -95,6 +95,8 @@ export default function Project({posts}) {
           property="og:image"
           content="https://res.cloudinary.com/dbyprqeyc/image/upload/v1675313489/pic_cpdbmi.jpg"
         />
+
+
       </Head>
       <Articles posts={posts} />
 </>
