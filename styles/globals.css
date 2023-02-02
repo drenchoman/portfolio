@@ -36,6 +36,17 @@
 
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
 
 
 html,
@@ -50,21 +61,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-p,
-li {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin: 1rem 0;
-}
-li {
-  margin: 0.5rem 0;
-  line-height: 1.5;
-}
-
-section > h2 {
-  font-size: 1.75rem;
-}
-
 .cover {
   background-size: cover;
 }
@@ -72,6 +68,7 @@ section > h2 {
 a {
   color: inherit;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 
@@ -85,47 +82,7 @@ a {
   
 }
 
-section {
-  margin: 1rem auto;
-  max-width: 1300px;
-}
 
-section > h2 > span {
-  font-size: 0.8rem;
-  font-weight: 400;
-  margin-right: 0.25rem;
-}
-
-section > h1 > span {
-  font-size: 0.8rem;
-  font-weight: 400;
-  margin-right: 0.25rem;
-}
-
-article {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  /* padding: 0 1rem; */
-}
-
-article > h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-article > h2 {
-  margin: 0 0 1rem 0;
-}
-
-blockquote {
-  margin: 0 auto;
-  display: inline-block;
-}
-blockquote > p {
-  font-size: 2rem;
-}
 
 /* .canvas{
   position: fixed;
