@@ -119,7 +119,7 @@ export default function Info() {
       },
       {
 
-        id: 23,
+        id: 26,
         name: 'Affinity Designer',
         icon: < SiAffinitydesigner/>,
       
@@ -143,36 +143,29 @@ export default function Info() {
     },
   ];
 
-  const test = () => {
-   tech.map((t) => (
-    console.log(t)
-   ))
-  }
-
-  test()
 
 
   return (
     <section className={styles.right}>
           <div className={styles.info}>
-           <div className={styles.techWrapper}>
-            <h3 className={styles.header}>Tech</h3>
+          <h3 className={styles.header}>TECH</h3>
+          
             <div className={styles.tech}>
-              {tech.map((t) => (
-                <Tech key={t.id} tech={t.technologies} />
+              {tech.map((t, i) => (
+                <Tech key={i} tech={t.technologies} />
                 ))}
             </div>
-            </div>
-            
+          
+            <h3 className={styles.header}>DESIGN</h3>
               <div className={styles.designWrapper}>
-                <h3>Design</h3>
+             
                 <div className={styles.design}>   
-                  {tech.map((t) => (
-                    <Tech key={t.id} tech={t.design} />
+                  {tech.map((t, i) => (
+                    <Tech key={i} tech={t.design} />
                     ))}
                 </div>
               </div>
-            </div>
+              </div>
           
         </section>
   )

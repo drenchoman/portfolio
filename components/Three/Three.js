@@ -63,7 +63,7 @@ export default function Three() {
       mesh.position.y = positionY
       return mesh
     }
-    const s1 = setSphere(0, 0, 1, 0.6)
+    const s1 = setSphere(0, 0, 1, 0.65)
     const s2 = setSphere(2, 1, 0.5, 0.9)
     const s3 = setSphere(-2, 0.3, 0.3, 0.3)
     scene.add(s1)

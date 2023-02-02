@@ -1,40 +1,18 @@
 import Head from "next/head";
-import Articles from "../components/RArticle/Articles";
+import Contact from "../components/RContact/Contact";
 import { useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 import AppContext from "../components/AppContext";
-import { getAllArticles } from '../src/utils/mdx';
 
-export async function getStaticProps() {
-  const articles = await getAllArticles();
+export default function RContact() {
 
-  articles
-    .map((article) => article.data)
-    .sort((a, b) => {
-      if (a.data.publishedAt > b.data.publishedAt) return 1;
-      if (a.data.publishedAt < b.data.publishedAt) return -1;
-
-      return 0;
-    });
-
-  return {
-    props: {
-      posts: articles.reverse(),
-    },
-  };
-}
-
-
-
-export default function Project({posts}) {
-  
   const router = useRouter()
   const context = useContext(AppContext)
   const path = router.pathname.substring(1)
 
   const capitaliseFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1)
-   
+    
   }
 
   const updateNav = (value) => {
@@ -49,11 +27,11 @@ export default function Project({posts}) {
   useEffect(() => {
     updateNav(path)
   },[])
-
+  
   return (
     <>
       <Head>
-        <title>Oscar Harron | Articles</title>
+        <title>Oscar Harron | Full Stack Developer</title>
         <meta
           name="Here you will find my blog posts on Web Development and beyond."
           content="Its me"
@@ -85,7 +63,9 @@ export default function Project({posts}) {
           content="width=device-width, initial-scale=1"
         />
       </Head>
-      <Articles posts={posts} />
-</>
+
+    
+      <Contact/>
+     </>
   );
 }

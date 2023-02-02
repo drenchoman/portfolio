@@ -29,11 +29,11 @@ export default function Intro() {
     {
     id: 3,
     name:'Info'
-    }
-  //   {
-  //   id: 4,
-  // name:'Contact'
-  // }
+    },
+    {
+    id: 4,
+  name:'Contact'
+  }
 ]
 
   return (

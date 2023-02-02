@@ -1,0 +1,52 @@
+.right{
+  grid-area: right;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  opacity: 0;
+  animation: fade 2s ease-in-out forwards;
+}
+
+.contact > p {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.link{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.link:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.link > svg{
+  margin-right: 0.25rem;
+}
+
+.contact > p > span {
+  margin: 0.25rem 0;
+}
+
+@keyframes fade {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+  
+}
