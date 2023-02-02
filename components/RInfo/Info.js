@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../styles/Info.module.css'
+import styles from '../../styles/RInfo.module.css'
 import Tech from './Tech'
 import {
   DiJavascript,
