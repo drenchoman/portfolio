@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import glslify from 'glslify'
-import vertexShader from './vertexShader.glsl'
-import fragmentShader from './fragmentShader.glsl'
+import { Canvas } from '@react-three/fiber';
 
 export default class Scene {
   canvas
