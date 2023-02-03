@@ -1,0 +1,71 @@
+.container{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  /* background-color: black; */
+  display: flex;
+justify-content: center;
+background-color:var(--background);
+align-items: center;
+animation: fadeOut 3s ease-in-out forwards;
+animation-delay: 2.5s;
+}
+
+.name{
+ display: flex;
+ flex-direction: row;
+  /* z-index: 5; */
+  text-align: center;
+  animation: fadeIn 2.5s ease-in-out forwards;
+  font-size: 3rem;
+  letter-spacing: 0.05rem;
+  font-weight: 200;
+  
+}
+
+.me{
+  font-weight: 400;
+}
+
+.name > span {
+  margin: 0.5rem;
+}
+
+
+  @keyframes fadeIn {
+    0%{
+opacity: 0;
+    }
+    70% {
+      opacity: 1;
+      
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeOut {
+    0%{
+      opacity: 1;
+    }
+    80%{
+      opacity: 0;
+    }
+    100%{
+     opacity: 0;
+      /* z-index: 0; */
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .name{
+      flex-direction: column;
+      
+    }
+    .me, .portfolio {
+      font-size: 2rem;
+    }
+  }

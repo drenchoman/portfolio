@@ -50,3 +50,18 @@
   }
   
 }
+
+
+.hide {
+  animation: hide 1s forwards ease-in-out;
+}
+@keyframes hide {
+  from{
+    opacity: 1;
+    scale: 1.2
+  }
+  to{
+    opacity: 0;
+  }
+  
+}
