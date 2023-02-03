@@ -23,19 +23,24 @@ export default function Intro() {
   const navOptions = [
     {
       id: 1,
-      name: 'Home'
+      name: 'Home',
+      link: '/'
     },
     {
     id: 2,
     name: 'Projects',
+    link: '/projects'
+
     },
     {
     id: 3,
-    name:'Info'
+    name:'Info',
+    link: '/info'
     },
     {
     id: 4,
-  name:'Contact'
+  name:'Contact',
+  link: '/contact'
   }
 ]
 
@@ -48,7 +53,7 @@ export default function Intro() {
     <nav>
       <ul className={styles.options}>
         {navOptions.map((o) => (
-          <li onClick={() => updateNav(o.name)} key={o.id}><Link href={`/${o.name.toLowerCase()}`}>{context.session.toLowerCase() == o.name.toLowerCase() ? '●' : o.name}</Link></li>
+          <li onClick={() => updateNav(o.name)} key={o.id}><Link href={o.link}>{context.session.toLowerCase() == o.name.toLowerCase() ? '●' : o.name}</Link></li>
         ))}
       </ul>
     </nav>
