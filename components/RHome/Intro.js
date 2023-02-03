@@ -3,6 +3,7 @@ import styles from '../../styles/Remake.module.css'
 import AppContext from '../AppContext'
 import { useRouter } from 'next/router'
 import {FiGithub} from 'react-icons/fi'
+import Link from 'next/link'
 
 
 export default function Intro() {
@@ -47,7 +48,7 @@ export default function Intro() {
     <nav>
       <ul className={styles.options}>
         {navOptions.map((o) => (
-          <li onClick={() => updateNav(o.name)} key={o.id}>{context.session.toLowerCase() == o.name.toLowerCase() ? '●' : o.name}</li>
+          <li onClick={() => updateNav(o.name)} key={o.id}><Link href={`/${o.name.toLowerCase()}`}>{context.session.toLowerCase() == o.name.toLowerCase() ? '●' : o.name}</Link></li>
         ))}
       </ul>
     </nav>
