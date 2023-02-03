@@ -4,6 +4,7 @@ import { ThemeProvider } from 'next-themes';
 import { useState } from 'react';
 import AppContext from '../components/AppContext';
 import Layout from '../components/Layout/layout';
+
 function MyApp({ Component, pageProps }) {
   const [session, setSession] = useState('Home')
   return (

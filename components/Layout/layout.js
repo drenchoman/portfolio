@@ -3,6 +3,8 @@ import styles from '../../styles/Remake.module.css'
 import Intro from '../RHome/Intro'
 import Theme from '../Theme/Theme'
 import Three from '../Three/Three'
+import { Canvas } from '@react-three/fiber'
+
 export default function layout({children}) {
   return (
     <>
