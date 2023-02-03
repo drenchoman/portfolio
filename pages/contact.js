@@ -107,7 +107,7 @@ export default function RContact() {
       </Head>
 
     
-      <Contact/>
+      <Contact />
      </>
   );
 }
