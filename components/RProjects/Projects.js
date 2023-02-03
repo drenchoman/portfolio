@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../../styles/RProject.module.css'
-import Image from 'next/image';
-import github from '../../public/github.svg'
+import {FiGithub} from 'react-icons/fi'
+
 import Link from 'next/link';
 
 const proj = [
@@ -59,12 +59,7 @@ export default function Projects() {
           
           <div className={styles.github}>
           <span className={styles.divider}>/</span>
-          <Image
-          className={styles.image}
-          src={github}
-          width={11}
-          height={11}
-          alt='Link to Github' />
+          <FiGithub/>
           </div>
           </Link>
 }

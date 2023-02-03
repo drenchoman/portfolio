@@ -85,9 +85,17 @@
 .subHeader{
   font-size: 1rem;
   font-weight: 200;
-  
+
   margin: 0 0.15rem;
 }
+
+.github{
+  font-size: 1rem;
+  margin: 0 0.15rem;
+  position: relative;
+  top: 0.1rem;
+}
+
 
 .right{
   grid-area: right;
