@@ -42,7 +42,7 @@ export default function Projects() {
   
   return (
     <div className={styles.right}>
-     <div className={styles.project}>
+     <section className={styles.project}>
        {proj.map((p, i) => 
        <div style={{animationDelay: `${i * 100}ms`}}   className={styles.container} key={p.id}>
         <Link href={p.link}>
@@ -67,7 +67,7 @@ export default function Projects() {
         </div>
         
        </div>)}
-    </div>
+    </section>
   </div>
   )
 }

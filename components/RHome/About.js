@@ -5,7 +5,7 @@ import styles from '../../styles/Remake.module.css'
 export default function About() {
   return (
         <div className={styles.right}>
-          <div className={styles.about}>
+          <section className={styles.about}>
             <p>
             <span>Based in AKL, NZ.</span>
             <span>Passionate about</span>
@@ -14,7 +14,7 @@ export default function About() {
             <span>that solve real</span>
             <span>world problems.</span>
           </p>
-          </div>
+          </section>
         </div>
     
   )

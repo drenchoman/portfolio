@@ -5,7 +5,7 @@ import { BsLinkedin, BsInstagram, BsGithub } from 'react-icons/bs'
 export default function Contact() {
   return (
         <div className={styles.right}>
-          <div className={styles.contact}>
+          <section className={styles.contact}>
             <p>
             <span>I am currently</span>
             <span>looking for Front</span>
@@ -17,7 +17,7 @@ export default function Contact() {
             <span><a className={styles.link} target="_blank" rel='noreferrer noopener' href='https://github.com/drenchoman'><BsGithub/>Github</a></span>
 
           </p>
-          </div>
+          </section>
         </div>
     
   )
