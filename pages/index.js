@@ -1,19 +1,17 @@
-import Head from "next/head";
-import styles from '../styles/Remake.module.css'
-import Theme from "../components/Theme/Theme";
-import About from '../components/RHome/About'
-import Intro from '../components/RHome/Intro'
+import Head from 'next/head';
+import styles from '../styles/Remake.module.css';
+import Theme from '../components/Theme/Theme';
+import About from '../components/RHome/About';
+import Intro from '../components/RHome/Intro';
 
 export default function Remake() {
-
-  
   return (
     <>
       <Head>
         <title>Oscar Harron | Full Stack Developer</title>
         <meta
           name="description"
-          content="Based in AKL, NZ. Passionate about building beautiful accessible websites that solve real world problems."
+          content="Portfolio of Oscar Harron. Based in AKL, NZ. Passionate about building beautiful accessible websites that solve real world problems."
         />
         <link
           rel="apple-touch-icon"
@@ -37,7 +35,7 @@ export default function Remake() {
           name="viewport"
           content="width=device-width, initial-scale=1"
         />
-     <meta
+        <meta
           property="og:title"
           content="Oscar Harron | Full Stack Developer"
         />
@@ -45,14 +43,17 @@ export default function Remake() {
           property="og:description"
           content="Based in AKL, NZ. Passionate about building beautiful accessible websites that solve real world problems."
         />
-        <meta property="og:url" content="https://www.oscarharron.com" />
+        <meta
+          property="og:url"
+          content="https://www.oscarharron.com"
+        />
         <meta
           property="og:image"
           content="https://res.cloudinary.com/dbyprqeyc/image/upload/v1675313489/pic_cpdbmi.jpg"
         />
 
-            {/* Linkedin */}
-            <meta
+        {/* Linkedin */}
+        <meta
           itemProp="name"
           content="Oscar Harron | Full Stack Developer"
         />
@@ -85,8 +86,7 @@ export default function Remake() {
         />
       </Head>
 
-    
       <About />
-     </>
+    </>
   );
 }

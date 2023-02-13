@@ -1,32 +1,29 @@
-import Head from "next/head";
-import Projects from '../components/RProjects/Projects'
-import { useEffect, useContext } from "react";
-import { useRouter } from "next/router";
-import AppContext from "../components/AppContext";
+import Head from 'next/head';
+import Projects from '../components/RProjects/Projects';
+import { useEffect, useContext } from 'react';
+import { useRouter } from 'next/router';
+import AppContext from '../components/AppContext';
 
 export default function Project() {
-  
-  const router = useRouter()
-  const context = useContext(AppContext)
-  const path = router.pathname.substring(1)
+  const router = useRouter();
+  const context = useContext(AppContext);
+  const path = router.pathname.substring(1);
 
   const capitaliseFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1)
-    
-  }
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
 
   const updateNav = (value) => {
-    if(value.toLowerCase() !== context.session.toLowerCase()){
-      let update = capitaliseFirstLetter(value)
-      context.setSession(update)
+    if (value.toLowerCase() !== context.session.toLowerCase()) {
+      let update = capitaliseFirstLetter(value);
+      context.setSession(update);
     }
-    return
-
-  }
+    return;
+  };
 
   useEffect(() => {
-    updateNav(path)
-  },[])
+    updateNav(path);
+  }, []);
 
   return (
     <>
@@ -34,7 +31,7 @@ export default function Project() {
         <title>Oscar Harron | Full Stack Developer</title>
         <meta
           name="description"
-          content="Based in AKL, NZ. Passionate about building beautiful accessible websites that solve real world problems."
+          content="Portfolio of Oscar Harron. Based in AKL, NZ. Passionate about building beautiful accessible websites that solve real world problems."
         />
         <link
           rel="apple-touch-icon"
@@ -58,7 +55,7 @@ export default function Project() {
           name="viewport"
           content="width=device-width, initial-scale=1"
         />
-      <meta
+        <meta
           property="og:title"
           content="Oscar Harron | Full Stack Developer"
         />
@@ -66,14 +63,17 @@ export default function Project() {
           property="og:description"
           content="Based in AKL, NZ. Passionate about building beautiful accessible websites that solve real world problems."
         />
-        <meta property="og:url" content="https://www.oscarharron.com" />
+        <meta
+          property="og:url"
+          content="https://www.oscarharron.com"
+        />
         <meta
           property="og:image"
           content="https://res.cloudinary.com/dbyprqeyc/image/upload/v1675313489/pic_cpdbmi.jpg"
         />
 
-            {/* Linkedin */}
-            <meta
+        {/* Linkedin */}
+        <meta
           itemProp="name"
           content="Oscar Harron | Full Stack Developer"
         />
@@ -105,7 +105,7 @@ export default function Project() {
           content="https://res.cloudinary.com/dbyprqeyc/image/upload/v1675313489/pic_cpdbmi.jpg"
         />
       </Head>
-      <Projects /> 
-</>
+      <Projects />
+    </>
   );
 }
